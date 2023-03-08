@@ -1,16 +1,15 @@
----
 title: 最佳情侣pk赛活动
-date: 2023-03-08 18:26:00
-index_img: https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
-category: H5接口文档
+index_img: >-
+  https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
+author: Dylan
 tags:
   - 接口文档
   - H5
 math: true
 mermaid: true
 sticky: 100
+date: 2023-03-08 18:26:00
 ---
-
 >最佳情侣pk赛活动接口文档，Ticket: https://github.com/olachat/veeka/issues/6199
 
 <!-- more -->

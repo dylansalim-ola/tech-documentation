@@ -362,8 +362,8 @@ post:
 # Based on LeanCloud
 # See: https://valine.js.org/configuration.html
 valine:
-  appid: ${{ vars.VALINE_APP_ID }}
-  appkey: ${{ vars.VALINE_APP_KEY }}
+  appid: ${{ env.VALINE_APP_ID }}
+  appkey: ${{ env.VALINE_APP_KEY }}
   placeholder: 留言仅限讨论，禁止广告等行为
   path: window.location.pathname
   avatar: robohash

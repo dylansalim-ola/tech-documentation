@@ -104,7 +104,7 @@ theme: fluid
 deploy:
   type: git
   repo: https://github.com/dylansalim-ola/tech-documentation # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
-  branch: main
+  branch: gh-pages
   message: "Update Blog"
   token: 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
 
@@ -112,4 +112,4 @@ admin:
   username: username
   password_hash: $2a$10$ASz7xt7bP3ibptiGXYwdM..iFXTeWeRmCCvRLrVAVEdek/5B4CFkq
   secret: my super secret phrase
-  deployCommand: git add . && git commit -m "Update blog" && git push origin/main
+  deployCommand: git add . && git commit -m "Update blog" && git push

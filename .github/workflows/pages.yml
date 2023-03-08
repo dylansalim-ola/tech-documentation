@@ -17,7 +17,6 @@ jobs:
         envkey_DEBUG: false
         envkey_VALINE_APP_ID: ${{ secrets.VALINE_APP_ID }}
         envkey_VALINE_APP_KEY: ${{ secrets.VALINE_APP_KEY }}
-        some_other_variable: foobar
         file_name: .env
         fail_on_empty: false
 

@@ -4,6 +4,33 @@
   
   
   <entry>
+    <title>AgileKit</title>
+    <link href="/tech-documentation/2023/03/09/agilekit/agilekit_intro_usage/"/>
+    <url>/tech-documentation/2023/03/09/agilekit/agilekit_intro_usage/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>AgileKit Docs and usage，Ticket: <a href="https://github.com/olachat/agilekit">https://github.com/olachat/agilekit</a></p></blockquote><span id="more"></span><h1 id="agilekit"><a href="#agilekit" class="headerlink" title="agilekit"></a>agilekit</h1><p>Go project to organize and process github issues.</p><h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul><li>go version 1.19</li></ul><h2 id="To-generate-CSV-file"><a href="#To-generate-CSV-file" class="headerlink" title="To generate CSV file"></a>To generate CSV file</h2><ol><li>Update the conf.toml<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">app</span>]<br><span class="hljs-string">port=5555</span><br><span class="hljs-string">GithubToken=&quot;YOUR_GITHUB_TOKEN&quot;</span><br><span class="hljs-string">OrgName=&quot;olachat&quot;</span><br><span class="hljs-string">ProjectNumber=12380446</span><br><span class="hljs-string">TeamName=&quot;veeka&quot;</span><br><span class="hljs-string">GithubAPIUrl=&quot;https://api.github.com/&quot;</span><br></code></pre></td></tr></table></figure></li><li>Generate CSV Files<br>a. Generate for all sprints<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-all <br></code></pre></td></tr></table></figure></li></ol><p>b. Generate for current sprint only</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-current <br></code></pre></td></tr></table></figure><h2 id="To-Archive-old-issues"><a href="#To-Archive-old-issues" class="headerlink" title="To Archive old issues"></a>To Archive old issues</h2><ol><li><p>Dry run to view the closable issues available</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive <br></code></pre></td></tr></table></figure></li><li><p>Execute close command to all closable issues <br>(WARNING: Run this cmd only when you know what you are doing)</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive-exec<br></code></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>agilekit</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>AgileKit</tag>
+      
+      <tag>Github Project</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>最佳情侣pk赛活动</title>
     <link href="/tech-documentation/2023/03/08/h5_%E6%B4%BB%E5%8A%A8/H5_CP_PK_event/"/>
     <url>/tech-documentation/2023/03/08/h5_%E6%B4%BB%E5%8A%A8/H5_CP_PK_event/</url>

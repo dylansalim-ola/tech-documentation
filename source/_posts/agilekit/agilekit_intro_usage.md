@@ -1,14 +1,13 @@
 ---
 title: AgileKit
 index_img: >-
-  https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
+  /images/agilekit.png
 author: Dylan
 tags:
   - AgileKit
   - Github Project
 math: true
 mermaid: true
-sticky: 100
 date: 2023-03-09 18:26:00
 ---
 >AgileKit Docs and usage，Ticket: https://github.com/olachat/agilekit

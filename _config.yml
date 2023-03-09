@@ -40,7 +40,7 @@ external_link:
   exclude: ''
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -106,10 +106,34 @@ deploy:
   repo: https://github.com/dylansalim-ola/tech-documentation # https://bitbucket.org/JohnSmith/johnsmith.bitbucket.io
   branch: gh-pages
   message: "Update Blog"
-  token: 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
+  # token: YOUR_TOKEN
 
 admin:
   username: username
   password_hash: $2a$10$ASz7xt7bP3ibptiGXYwdM..iFXTeWeRmCCvRLrVAVEdek/5B4CFkq
   secret: my super secret phrase
   deployCommand: git add . && git commit -m "Update blog" && git push
+
+marked:
+  gfm: true
+  pedantic: false
+  breaks: true
+  smartLists: true
+  smartypants: true
+  quotes: '“”‘’'
+  modifyAnchors: 0
+  anchorAlias: false
+  autolink: true
+  mangle: true
+  sanitizeUrl: false
+  dompurify: false
+  headerIds: true
+  lazyload: false
+  prependRoot: true
+  postAsset: true
+  external_link:
+    enable: false
+    exclude: []
+    nofollow: false
+  disableNunjucks: false
+  descriptionLists: true

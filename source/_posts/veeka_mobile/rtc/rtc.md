@@ -1,7 +1,7 @@
 ---
 title: Agora & BBRTC Debug steps
 index_img: >-
-  /images/auth.jpg
+  /images/agora.jpg
 author: Dylan
 tags:
   - Agora

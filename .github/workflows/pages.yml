@@ -19,7 +19,7 @@ jobs:
       - name: Update values.yaml
         uses: fjogeleit/yaml-update-action@main
         with:
-          valueFile: '_config.fluid.yaml'
+          valueFile: '_config.fluid.yml'
           propertyPath: 'gitalk.clientSecret'
           value: ${{ secrets.GITTALK_SECRET }}
           commitChange: false

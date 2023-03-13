@@ -14,7 +14,7 @@ timezone: 'Asia/Singapore'
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
 url: https://dylansalim-ola.github.io/tech-documentation
-permalink: :year/:month/:day/:title/
+permalink: /post/:title.html
 permalink_defaults:
 pretty_urls:
   trailing_index: true # Set to false to remove trailing 'index.html' from permalinks
@@ -44,14 +44,14 @@ post_asset_folder: true
 relative_link: false
 future: true
 highlight:
-  enable: true
+  enable: false # default: true, customized for aurora theme
   line_number: true
   auto_detect: false
   tab_replace: ''
   wrap: true
   hljs: false
 prismjs:
-  enable: false
+  enable: true # default: true, customized for aurora theme
   preprocess: true
   line_number: true
   tab_replace: ''

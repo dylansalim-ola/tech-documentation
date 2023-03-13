@@ -57,5 +57,63 @@
   
   
   
+  <entry>
+    <title>Auth failed issue upon login</title>
+    <link href="/tech-documentation/2023/03/08/veeka_mobile/login/login/"/>
+    <url>/tech-documentation/2023/03/08/veeka_mobile/login/login/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>Existing issue with Auth failed when switching dev and prod environment when user is logged in</p></blockquote><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>If user change environment while logged in, and click restart to take effect button in developer options, it will show ‘Auth failed’ error message on the next app start. This happens because of the globalProviders was set on the application.dart level instead on the after login part of the code.</p><ul><li><p>Line 151, application.dart</p><figure class="highlight less"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs less"><span class="hljs-selector-tag">globalProviders</span><span class="hljs-selector-class">.addAll</span>([<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">UserModel</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">MomentModel</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">ProfilePayload</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">GiftMediaModel</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">ThemeProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">MomentVideoProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">PersonalInfoProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">RechargePackageProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">GiftDecorateProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; <span class="hljs-built_in">MomentPostGuideProvider</span>(), <span class="hljs-attribute">lazy</span>: false),<br>      if (Constant.isDevMode) <span class="hljs-built_in">ChangeNotifierProvider</span>(<span class="hljs-attribute">create</span>: (_) =&gt; hotupdater, <span class="hljs-attribute">lazy</span>: false),<br>    ]);<br></code></pre></td></tr></table></figure></li><li><p>This part of code will triggered actively and will trigger the api calls to get information such as taskCenterShowRedDot</p></li><li><p>Snippet from ProfilePayload</p><figure class="highlight reasonml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><code class="hljs reasonml"><span class="hljs-constructor">ProfilePayload()</span> &#123;<br>    eventCenter.add<span class="hljs-constructor">Listener(System.EventLogin, <span class="hljs-params">_onLogin</span>)</span>;<br>    eventCenter.add<span class="hljs-constructor">Listener(&#x27;TaskCenter.<span class="hljs-params">noRedDot</span>&#x27;, <span class="hljs-params">_removeTaskDot</span>)</span>;<br>    eventCenter.add<span class="hljs-constructor">Listener(EventConstant.TaskCenterClaimableChange, <span class="hljs-params">_taskCenterClaimableChange</span>)</span>;<br><br>    reload<span class="hljs-literal">()</span>;<br>    load<span class="hljs-constructor">MomentsInfo()</span>;<br>    load<span class="hljs-constructor">MomentUnreadMsg()</span>;<br>    load<span class="hljs-constructor">VipMallRedPoint()</span>;<br>    load<span class="hljs-constructor">GiftWallPoint()</span>;<br>    load<span class="hljs-constructor">MentorShipRedPoint()</span>;<br>    load<span class="hljs-constructor">PopularityRedPoint()</span>;<br>    load<span class="hljs-constructor">VipRedPoint()</span>;<br>    load<span class="hljs-constructor">GoldBeanRedPoint()</span>;<br>    <span class="hljs-keyword">function</span><span class="hljs-constructor">CenterHasRedDot()</span>;<br>    task<span class="hljs-constructor">CenterShowRedDot()</span>;<br>    load<span class="hljs-constructor">InvitePrizeRedDot()</span>;<br><br>    _momentRedPointTimer =<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Timer</span>.</span></span>periodic(<span class="hljs-constructor">Duration(<span class="hljs-params">seconds</span>: 60)</span>,<span class="hljs-function"> (<span class="hljs-params">timer</span>) =&gt;</span> load<span class="hljs-constructor">MomentsInfo()</span>);<br>    _momentUnReadMsgTimer =<br>        <span class="hljs-module-access"><span class="hljs-module"><span class="hljs-identifier">Timer</span>.</span></span>periodic(<span class="hljs-constructor">Duration(<span class="hljs-params">seconds</span>: 90)</span>,<span class="hljs-function"> (<span class="hljs-params">timer</span>) =&gt;</span> load<span class="hljs-constructor">MomentUnreadMsg()</span>);<br>  &#125;<br></code></pre></td></tr></table></figure></li><li><p>You might think that adding a check on the session.isLogined() might solve the issue, but actually it will not. This part of code will be called upon app startup which is before it checks that the app session is valid or not. Calling the Session here will only get the previous session status, which in turns causing the session.isLogined() to be true.</p></li></ul><h2 id="Possible-fix-for-this-issue"><a href="#Possible-fix-for-this-issue" class="headerlink" title="Possible fix for this issue"></a>Possible fix for this issue</h2><ol><li>Destroy the session upon clicking the ‘重启生效’, but it creates extra steps for developer and QA during testing (Need to relogin if we change environment)</li></ol><h2 id="Why-we-opt-to-not-fixing-this-issue"><a href="#Why-we-opt-to-not-fixing-this-issue" class="headerlink" title="Why we opt to not fixing this issue"></a>Why we opt to not fixing this issue</h2><ol><li>Currently it only affects dev environment and it is not a fatal issue (Online users does not have the rights to switch environment)</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>veeka_mobile</category>
+      
+      <category>login</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Authentication</tag>
+      
+      <tag>Login</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>Agora &amp; BBRTC Debug steps</title>
+    <link href="/tech-documentation/2023/03/08/veeka_mobile/rtc/rtc/"/>
+    <url>/tech-documentation/2023/03/08/veeka_mobile/rtc/rtc/</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>Steps to debug agora and bbrtc</p></blockquote><h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Agora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.<br>Agora is used in video room whereas bbrtc is used in other room<br>However, due to the network connection issue in some region including Taiwan, Agora is still the default rtc engine to use in Veeka App.</p><h2 id="How-to-determine-if-we-have-agora-x2F-bbrtc-issue"><a href="#How-to-determine-if-we-have-agora-x2F-bbrtc-issue" class="headerlink" title="How to determine if we have agora&#x2F;bbrtc issue"></a>How to determine if we have agora&#x2F;bbrtc issue</h2><p>Check if the following items are having issues:</p><ul><li>Listen music in room</li><li>Video call and see if other can view the video</li></ul><h2 id="Possible-issue"><a href="#Possible-issue" class="headerlink" title="Possible issue"></a>Possible issue</h2><ol><li>Agora&#x2F;BBRTC app id expired issue</li></ol><ul><li>Currently the app id for both rtc engine is set by Veeka mobile app, although there is api and remote config to replace these app id, none of them are used currently. The developer_options.dart should be the only source of truth when it comes to the app id configuration.</li></ul><h2 id="How-to-solve"><a href="#How-to-solve" class="headerlink" title="How to solve"></a>How to solve</h2><ol><li>Change to different environment and check if the issue persist</li><li>If it does not exist on the other environment, it is high likely that the app id is expired, find X教授 if it is related to Agora, bbrtc team if it is related to bbrtc</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>veeka_mobile</category>
+      
+      <category>rtc</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>Agora</tag>
+      
+      <tag>BBRTC</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
   
 </search>

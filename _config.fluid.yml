@@ -16,6 +16,9 @@
 # Global
 #---------------------------
 
+url: https://dylansalim-ola.github.io/tech-documentation
+default_layout: page
+
 # 用于浏览器标签的图标
 # Icon for browser tab
 favicon: /img/fluid.png

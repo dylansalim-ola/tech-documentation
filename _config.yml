@@ -13,7 +13,7 @@ timezone: 'Asia/Singapore'
 
 # URL
 ## Set your site url here. For example, if you use GitHub Page, set url as 'https://username.github.io/project'
-url: https://dylansalim-ola.github.io/tech-documentation
+# url: https://dylansalim-ola.github.io/tech-documentation
 permalink: /post/:title.html
 permalink_defaults:
 pretty_urls:
@@ -32,7 +32,7 @@ skip_render:
 
 # Writing
 new_post_name: :title.md # File name of new posts
-default_layout: page
+# default_layout: post
 titlecase: false # Transform title into titlecase
 external_link:
   enable: true # Open external links in new tab
@@ -108,32 +108,8 @@ deploy:
   message: "Update Blog"
   # token: YOUR_TOKEN
 
-admin:
+  admin:
   username: username
   password_hash: $2a$10$ASz7xt7bP3ibptiGXYwdM..iFXTeWeRmCCvRLrVAVEdek/5B4CFkq
   secret: my super secret phrase
   deployCommand: git add . && git commit -m "Update blog" && git push
-
-marked:
-  gfm: true
-  pedantic: false
-  breaks: true
-  smartLists: true
-  smartypants: true
-  quotes: '“”‘’'
-  modifyAnchors: 0
-  anchorAlias: false
-  autolink: true
-  mangle: true
-  sanitizeUrl: false
-  dompurify: false
-  headerIds: true
-  lazyload: false
-  prependRoot: true
-  postAsset: true
-  external_link:
-    enable: false
-    exclude: []
-    nofollow: false
-  disableNunjucks: false
-  descriptionLists: true

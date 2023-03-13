@@ -1,15 +1,14 @@
 ---
 title: Agora & BBRTC Debug steps
 index_img: >-
-  https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
+  /images/auth.jpg
 author: Dylan
 tags:
   - Agora
   - BBRTC
 math: true
 mermaid: true
-sticky: 100
-date: 2023-03-08 18:26:00
+date: 2023-03-13 18:26:00
 ---
 >Steps to debug agora and bbrtc
 

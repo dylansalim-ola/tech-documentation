@@ -1,0 +1,821 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/tech-documentation/img/fluid.png">
+  <link rel="icon" href="/tech-documentation/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Dylan">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="最佳情侣pk赛活动接口文档，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;veeka&#x2F;issues&#x2F;6199">
+<meta property="og:type" content="article">
+<meta property="og:title" content="最佳情侣pk赛活动">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/H5_CP_PK_event.html">
+<meta property="og:site_name" content="Dylan的文档">
+<meta property="og:description" content="最佳情侣pk赛活动接口文档，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;veeka&#x2F;issues&#x2F;6199">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp">
+<meta property="article:published_time" content="2023-03-08T10:26:00.000Z">
+<meta property="article:modified_time" content="2023-03-14T00:58:18.903Z">
+<meta property="article:author" content="Dylan">
+<meta property="article:tag" content="接口文档">
+<meta property="article:tag" content="H5">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp">
+  
+  
+  
+  <title>最佳情侣pk赛活动 - Dylan的文档</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/tech-documentation/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/tech-documentation/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/tech-documentation/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"dylansalim-ola.github.io","root":"/tech-documentation/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"LyT8mpSI2Jq9CRhOtNOgBXkE-9Nh9j0Va","app_key":"fUOlkXhD9wcmxOTed9NdlqPH","server_url":"https://lyt8mpsi.lc-cn-e1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/tech-documentation/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/tech-documentation/js/utils.js" ></script>
+  <script  src="/tech-documentation/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/tech-documentation/">
+      <strong>Dylan的文档</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://rmt.dogedoge.com/fetch/fluid/storage/bg/vdysjx.png?w=1920&fmt=webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="最佳情侣pk赛活动"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-08 18:26" pubdate>
+          March 8, 2023 pm
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.8k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          74 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">最佳情侣pk赛活动</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <blockquote>
+<p>最佳情侣pk赛活动接口文档，Ticket: <a target="_blank" rel="noopener" href="https://github.com/olachat/veeka/issues/6199">https://github.com/olachat/veeka/issues/6199</a></p>
+</blockquote>
+<span id="more"></span>
+<h2 id="最佳情侣pk赛活动"><a href="#最佳情侣pk赛活动" class="headerlink" title="最佳情侣pk赛活动"></a>最佳情侣pk赛活动</h2><h3 id="1-Main-API"><a href="#1-Main-API" class="headerlink" title="1. Main API"></a>1. Main API</h3><p>Desc: Main API before tab</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;main</p>
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;event_period&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2023.1.21-2023.1.25&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;my_cp_content&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;cp_vote_accumulated&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">52000</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;is_cp_available&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-comment">// 1 for available, 0 for not-available (display find cp btn)</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;prize_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;prize_type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gift&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;钱兔似锦&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;desc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;100金豆&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;gift&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;gift_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;reward_category_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;category_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;category_name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;TOP1&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;reward_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-punctuation">&#123;</span><br>          <span class="hljs-attr">&quot;prize_type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gift&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;钱兔似锦&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;desc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;100金豆&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;gift&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>            <span class="hljs-attr">&quot;gift_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/.png&quot;</span><br>          <span class="hljs-punctuation">&#125;</span><br>        <span class="hljs-punctuation">&#125;</span><br>      <span class="hljs-punctuation">]</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;category_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;category_name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;TOP2&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;reward_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>        <span class="hljs-punctuation">&#123;</span><br>          <span class="hljs-attr">&quot;prize_type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gift&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;钱兔似锦&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;desc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;100金豆&quot;</span><span class="hljs-punctuation">,</span><br>          <span class="hljs-attr">&quot;gift&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>            <span class="hljs-attr">&quot;badge&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;10天&quot;</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;gift_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>            <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/.png&quot;</span><br>          <span class="hljs-punctuation">&#125;</span><br>        <span class="hljs-punctuation">&#125;</span><br>      <span class="hljs-punctuation">]</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="2-CP-Voting-amp-Prize-Box-Tab"><a href="#2-CP-Voting-amp-Prize-Box-Tab" class="headerlink" title="2. CP Voting &amp; Prize Box Tab"></a>2. CP Voting &amp; Prize Box Tab</h3><p>Desc: CP Voting Tab content</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetCPVotingTab</p>
+<p>5 votes per day, recharge once get another voting chance</p>
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;vote_remaining&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//if vote left is 0, then the user is not allowed to vote</span><br>  <span class="hljs-attr">&quot;can_open_box&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// if user can open the box</span><br>  <span class="hljs-attr">&quot;reward_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;prize_type&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;gift&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;钱兔似锦&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;desc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;100金豆&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;gift&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;badge&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;10天&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;gift_id&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">0</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;/.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="3-Best-CP-Billboard-Tab"><a href="#3-Best-CP-Billboard-Tab" class="headerlink" title="3. Best CP Billboard Tab"></a>3. Best CP Billboard Tab</h3><p>Desc: Billboard tab content</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetBestCPBillboardTab</p>
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;not_rank_tips&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">// if there isn&#x27;t any user in the rank return this, this will only display if the user rank list is empty, len(user_rank_list) == 0</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;活动还没开始&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;sub_title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;活动将在-月-日至-月-日&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;user_rank_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-comment">// if there is any user in the rank return the list of items, if not, return empty array, do not return null</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;rank_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;cp_vote_accumulated&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">52000</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;my_rank&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;rank_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;cp_vote_accumulated&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">52000</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;is_cp_available&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-comment">// 1 for available, 0 for not-available (display find cp btn)</span><br>  <span class="hljs-punctuation">&#125;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="4-Love-Letter-Tab"><a href="#4-Love-Letter-Tab" class="headerlink" title="4. Love Letter Tab"></a>4. Love Letter Tab</h3><p>Desc: For display love letter content</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetLoveLetterBillboardTab</p>
+<p>Contain sent love letter by the user, disappear after 24 hours</p>
+<ul>
+<li>Normal Love Letter limits at 20 words</li>
+<li>Premium Love Letter limits at 40 words<br><br>Sample Request:</li>
+</ul>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;can_send_normal_letter&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// if the normal letter have send limit</span><br>  <span class="hljs-attr">&quot;can_send_premium_letter&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-literal"><span class="hljs-keyword">true</span></span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// if the premium letter have send limit</span><br>  <span class="hljs-attr">&quot;not_rank_tips&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">// if there isn&#x27;t any user in the rank return this, this will only display if the user rank list is empty, len(user_rank_list) == 0</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;暂时还没有情书&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;sub_title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;快去填写情书吧！&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;user_rank_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-comment">// if there is any user in the rank return the list of items, if not, return empty array, do not return null</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;rank_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;cp_vote_accumulated&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">52000</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;letter_content&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;꧅你好(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅꧅&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;letter_date&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;2023年7月10日&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;letter_time&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;12:02&quot;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="5-Display-Voting-CP-List"><a href="#5-Display-Voting-CP-List" class="headerlink" title="5. Display Voting CP List"></a>5. Display Voting CP List</h3><p>Desc: For display Voting CP List</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetInitialVotingCPList</p>
+<p>Return 50 entries of Voting CP List<br>Sample Request:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;error_message&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;你已经投票五次了&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">// default: &quot;&quot;</span><br>  <span class="hljs-attr">&quot;cp_list_to_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;cp_vote_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;can_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-comment">// 1 for can vote, 0 for cannot</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="6-Search-Related-Voting-CP-List"><a href="#6-Search-Related-Voting-CP-List" class="headerlink" title="6. Search Related Voting CP List"></a>6. Search Related Voting CP List</h3><p>Desc: Search request for Related Voting CP List, by uid and name</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;SearchCPList</p>
+<p>This api only call if user searched</p>
+<p>Sample Request</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;search_text&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;112&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;msg&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;没有资料&quot;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;cp_list_to_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;cp_vote_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;can_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-comment">// 1 for can vote, 0 for cannot</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="7-Vote-for-CP"><a href="#7-Vote-for-CP" class="headerlink" title="7. Vote for CP"></a>7. Vote for CP</h3><p>Sample Request</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;cp_vote_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>Sample Response:<br>return success: true by default</p>
+<h3 id="8-Send-Love-Letter"><a href="#8-Send-Love-Letter" class="headerlink" title="8. Send Love Letter"></a>8. Send Love Letter</h3><p>Disclaimer: The get friend list api was skip if the UI for friend selection to send love letter can be done via mobile<br>&amp; if the letter can send to the same user multiple times</p>
+<p>Desc: API for sending love letter</p>
+<p>URL: &#x2F;activity&#x2F;cp_valentine_event&#x2F;SendLoveLetter</p>
+<p>Sample Request</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;cp_vote_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>Sample Response:<br>return success: true by default</p>
+<h3 id="9-Send-Normal-Love-Letter"><a href="#9-Send-Normal-Love-Letter" class="headerlink" title="9. Send Normal Love Letter"></a>9. Send Normal Love Letter</h3><h3 id="10-Send-Premium-Love-Letter"><a href="#10-Send-Premium-Love-Letter" class="headerlink" title="10. Send Premium Love Letter"></a>10. Send Premium Love Letter</h3><p>Disclaimer: The get friend list api was skip if the UI for friend selection to send love letter can be done via mobile<br>&amp; if the letter can send to the same user multiple times</p>
+<p>Desc: API for sending love letter</p>
+<p>URL: &#x2F;activity&#x2F;cp_valentine_event&#x2F;SendNormalLoveLetter<br>URL: &#x2F;activity&#x2F;cp_valentine_event&#x2F;SendPremiumLoveLetter</p>
+<p>Sample Request</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;love_letter_msg&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;꧅你好(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅(ؓؒؒؑؑؖؔؓؒؐؐ⁼̴̀ωؘؙؖؕؔؓؒؑؐؕ⁼̴̀ )꧅꧅&quot;</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>Sample Response:<br>return success: true by default</p>
+<h3 id="11-Display-Love-letter-inbox"><a href="#11-Display-Love-letter-inbox" class="headerlink" title="11. Display Love letter inbox"></a>11. Display Love letter inbox</h3><p>Desc: For display Love letter inbox, display all inbox</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetLoveLetterInboxList</p>
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;error_message&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//没有信息不会放在这里</span><br>  <span class="hljs-attr">&quot;cp_list_to_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;cp_vote_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;can_vote&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span> <span class="hljs-comment">// 1 for can vote, 0 for cannot</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="12-Display-Task-list"><a href="#12-Display-Task-list" class="headerlink" title="12. Display Task list"></a>12. Display Task list</h3><p>Desc: For display Love letter inbox, display all inbox</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;GetTaskList</p>
+<p>Sample Response:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;error_message&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;&quot;</span><span class="hljs-punctuation">,</span> <span class="hljs-comment">//没有信息不会放在这里</span><br>  <span class="hljs-attr">&quot;task_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;task_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;任务 1&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;desc&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;情侣签到&quot;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;current_progress_point&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;max_progress_point&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;cp_heart_point&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">30</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;status&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;UNCLAIMED&quot;</span> <span class="hljs-comment">//enum of &#123;UNCLAIMED, CLAIMED, UNAVAILABLE&#125;</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<h3 id="13-Claim-Task-list"><a href="#13-Claim-Task-list" class="headerlink" title="13. Claim Task list"></a>13. Claim Task list</h3><p>Desc: For display Love letter inbox, display all inbox</p>
+<p>URL: &#x2F;activity&#x2F;best_cp_pk_event&#x2F;ClaimTaskList</p>
+<p>Sample Request:</p>
+<figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;task_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">3</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
+
+<p>Sample Response:<br>return success: true by default</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/tech-documentation/categories/h5-%E6%B4%BB%E5%8A%A8/" class="category-chain-item">h5_活动</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tech-documentation/tags/%E6%8E%A5%E5%8F%A3%E6%96%87%E6%A1%A3/">#接口文档</a>
+      
+        <a href="/tech-documentation/tags/H5/">#H5</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>最佳情侣pk赛活动</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/h5_活动/H5_CP_PK_event.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Dylan</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>March 8, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - Share-alike">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/tech-documentation/post/agilekit/agilekit_intro_usage.html" title="AgileKit">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">AgileKit</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/tech-documentation/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
+          {
+            id: '988a8394212219cc53b91f2d9f8a73e6'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/tech-documentation/js/events.js" ></script>
+<script  src="/tech-documentation/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/tech-documentation/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/tech-documentation/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/tech-documentation/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/tech-documentation/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

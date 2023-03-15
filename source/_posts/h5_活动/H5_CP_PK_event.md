@@ -20,7 +20,7 @@ date: 2023-03-08 18:26:00
 
 Desc: Main API before tab
 
-URL: /activity/best_cp_pk_event/main
+URL: /activity/best_cp_pk_event/BestCpPkEventInfo
 
 Sample Response:
 
@@ -38,7 +38,6 @@ Sample Response:
       "name": "girl",
       "icon": ".png"
     },
-    "cp_vote_accumulated": 52000,
     "is_cp_available": 1 // 1 for available, 0 for not-available (display find cp btn)
   },
   "prize_list": [
@@ -52,6 +51,9 @@ Sample Response:
       }
     }
   ],
+  "count_down": {
+    "left_second": 10000 // left countdown seconds in milliseconds
+  },
   "reward_category_list": [
     {
       "category_id": 0,

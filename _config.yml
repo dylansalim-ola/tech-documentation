@@ -113,3 +113,6 @@ deploy:
   password_hash: $2a$10$ASz7xt7bP3ibptiGXYwdM..iFXTeWeRmCCvRLrVAVEdek/5B4CFkq
   secret: my super secret phrase
   deployCommand: git add . && git commit -m "Update blog" && git push
+
+flowchart:
+  options:

@@ -17,6 +17,7 @@
     "hexo-deployer-git": "^4.0.0",
     "hexo-enhancer": "^1.0.10",
     "hexo-filter-author-from-git": "^0.1.1",
+    "hexo-filter-flowchart": "^1.0.4",
     "hexo-generator-archive": "^2.0.0",
     "hexo-generator-category": "^2.0.0",
     "hexo-generator-index": "^3.0.0",

@@ -58,7 +58,7 @@ Sample Response:
         {
           "prize_type": "gift",
           "name": "钱兔似锦",
-          "desc": "100金豆",
+          "gold_bean_price": "100",
           "gift": {
             "gift_id": 0,
             "icon": "/.png"
@@ -67,12 +67,12 @@ Sample Response:
       ]
     },
     "cp_ring_tab_content": {
-      "currency_exchange_rate": 1, // 1金豆 = ？爱心
+      "currency_exchange_rate": 2, // 1金豆 = ？爱心
       "prize_list": [
         {
           "prize_type": "gift",
           "name": "钱兔似锦",
-          "desc": "100金豆",
+          "gold_bean_price": "100",
           "gift": {
             "gift_id": 0,
             "icon": "/.png"
@@ -82,13 +82,21 @@ Sample Response:
     },
     "friend_help_tab_content": {
       "currency_exchange_rate": 2, // 1助力值 = ？爱心
-      "accumulated_heart_point": 300
+      "accumulated_heart_point": 300,
+      "friend_list": [
+        {
+          "uid": 110298,
+          "name": "boy",
+          "icon": ".png"
+        }
+      ] // top 5 friend who voted for you, if empty return []
     }
   }
 }
 ```
 
 ### 2. Submit to request for friend vote
+
 Desc: User tab on 获得助力 button -> Open in app modal to pick friends to ask for help -> Click submit -> Submit this api with friends list to send 系统消息
 
 URL: /activity/best_cp_pk_event/RequestFriendVote
@@ -100,8 +108,6 @@ Sample Request:
   "friend_uid_list": ["112805", "112803"]
 }
 ```
-
-
 
 ### 3. Get Task list
 
@@ -146,7 +152,6 @@ Sample Request:
 Sample Response:
 return success: true by default
 
-
 ### 5. Get Friend Help Vote Billboard Tab
 
 Desc: 助力好友 Billboard tab
@@ -154,6 +159,7 @@ Desc: 助力好友 Billboard tab
 URL: /activity/best_cp_pk_event/FriendHelpVoteBillboardTab
 
 Sample Request:
+
 ```json lines
 {
   "friend_uid": "112805" // friend_uid is empty if no extra filtering is required (user is not enter from 系统消息)
@@ -168,7 +174,7 @@ Sample Response:
     // if there isn't any user in the rank return this, this will only display if the user rank list is empty, len(user_rank_list) == 0
     "title": "活动还没开始",
     "sub_title": "活动将在-月-日至-月-日"
-  }, 
+  },
   "vote_owned": "300",
   "max_vote_per_request": 10,
   "user_rank_list": [
@@ -190,20 +196,20 @@ Sample Response:
     }
   ],
   "transaction_history": [
-      {
-        "title": "充值",
-        "cp_heart_point": 200
-      },
-      {
-        "title": "助力<朋友A>CP<朋友CP>",
-        "cp_heart_point": 10
-      }
-    ]
+    {
+      "title": "充值",
+      "cp_heart_point": 200
+    },
+    {
+      "title": "助力<朋友A>CP<朋友CP>",
+      "cp_heart_point": 10
+    }
+  ]
 }
 ```
 
-
 ### 6. Submit to cast vote CP Friends
+
 Desc: For display Love letter inbox, display all inbox
 
 URL: /activity/best_cp_pk_event/VoteCpFriend
@@ -256,9 +262,10 @@ Sample Response:
 ```
 
 ### Complicated Flow
-#### 1. For request vote from friends
-Click on the 助力好友btn on the third tab -> mobile display the bottom sheet to select friends -> click submit -> 
-Server side send 系统消息 to the selected friends with clickable link <EVENT_LINK>?friendUid="<FRIEND_UID>" -> 
-Open the event page and auto scroll to the 助力好友 billboard section -> 
-the api 5 [5. Get Friend Help Vote Billboard Tab] should provide the friendUid as param, and the return array should have the selected friend CP as first item
 
+#### 1. For request vote from friends
+
+Click on the 助力好友 btn on the third tab -> mobile display the bottom sheet to select friends -> click submit ->
+Server side send 系统消息 to the selected friends with clickable link <EVENT_LINK>?friendUid="<FRIEND_UID>" ->
+Open the event page and auto scroll to the 助力好友 billboard section ->
+the api 5 [5. Get Friend Help Vote Billboard Tab] should provide the friendUid as param, and the return array should have the selected friend CP as first item

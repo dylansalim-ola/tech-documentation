@@ -25,7 +25,7 @@
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp">
 <meta property="article:published_time" content="2023-03-08T10:26:00.000Z">
-<meta property="article:modified_time" content="2023-03-23T10:16:10.343Z">
+<meta property="article:modified_time" content="2023-03-24T03:53:25.469Z">
 <meta property="article:author" content="Dylan">
 <meta property="article:tag" content="接口文档">
 <meta property="article:tag" content="H5">
@@ -223,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          6.1k words
+          6.3k words
         
       </span>
     
@@ -234,7 +234,7 @@
         
         
         
-          51 mins
+          53 mins
         
       </span>
     
@@ -321,7 +321,14 @@
 <p>Sample Response:</p>
 <figure class="highlight json"><figcaption><span>lines</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><code class="hljs json"><span class="hljs-punctuation">&#123;</span><br>  <span class="hljs-attr">&quot;not_rank_tips&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-comment">// if there isn&#x27;t any user in the rank return this, this will only display if the user rank list is empty, len(user_rank_list) == 0</span><br>    <span class="hljs-attr">&quot;title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;活动还没开始&quot;</span><span class="hljs-punctuation">,</span><br>    <span class="hljs-attr">&quot;sub_title&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;活动将在-月-日至-月-日&quot;</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;count_down&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>    <span class="hljs-attr">&quot;left_second&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">10000</span> <span class="hljs-comment">// left countdown seconds in milliseconds</span><br>  <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>  <span class="hljs-attr">&quot;user_rank_list&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">[</span><br>    <span class="hljs-comment">// if there is any user in the rank return the list of items, if not, return empty array, do not return null</span><br>    <span class="hljs-punctuation">&#123;</span><br>      <span class="hljs-attr">&quot;rank_idx&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">1</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;left_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110298</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;boy&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;right_user_info&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-punctuation">&#123;</span><br>        <span class="hljs-attr">&quot;uid&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">110299</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;girl&quot;</span><span class="hljs-punctuation">,</span><br>        <span class="hljs-attr">&quot;icon&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-string">&quot;.png&quot;</span><br>      <span class="hljs-punctuation">&#125;</span><span class="hljs-punctuation">,</span><br>      <span class="hljs-attr">&quot;cp_vote_accumulated&quot;</span><span class="hljs-punctuation">:</span> <span class="hljs-number">52000</span><br>    <span class="hljs-punctuation">&#125;</span><br>  <span class="hljs-punctuation">]</span><br><span class="hljs-punctuation">&#125;</span><br></code></pre></td></tr></table></figure>
 
-<h3 id="Complicated-Flow"><a href="#Complicated-Flow" class="headerlink" title="Complicated Flow"></a>Complicated Flow</h3><h4 id="1-For-request-vote-from-friends"><a href="#1-For-request-vote-from-friends" class="headerlink" title="1. For request vote from friends"></a>1. For request vote from friends</h4><p>Click on the 助力好友 btn on the third tab -&gt; mobile display the bottom sheet to select friends -&gt; click submit -&gt;<br>Server side send 系统消息 to the selected friends with clickable link <EVENT_LINK>?friendUid&#x3D;”<FRIEND_UID>“ -&gt;<br>Open the event page and auto scroll to the 助力好友 billboard section -&gt;<br>the api 5 [5. Get Friend Help Vote Billboard Tab] should provide the friendUid as param, and the return array should have the selected friend CP as first item</p>
+<h3 id="IM-extra-fields-for-api-5-5-Get-Friend-Help-Vote-Billboard-Tab"><a href="#IM-extra-fields-for-api-5-5-Get-Friend-Help-Vote-Billboard-Tab" class="headerlink" title="IM extra fields for api 5 [5. Get Friend Help Vote Billboard Tab]"></a>IM extra fields for api 5 [5. Get Friend Help Vote Billboard Tab]</h3><ul>
+<li>extra[‘url’] &#x3D; <EVENT_URL></li>
+<li>extra[‘image_url’] &#x3D; <IMAGE_URL> by 大区</li>
+<li>extra[‘type’] &#x3D; ‘event_invite’</li>
+<li>extra[‘title’] &#x3D; <EVENT_TITLE> by 大区</li>
+<li>message.content &#x3D; ‘<DESC>‘</li>
+</ul>
+<h3 id="Complicated-Flow"><a href="#Complicated-Flow" class="headerlink" title="Complicated Flow"></a>Complicated Flow</h3><h4 id="1-For-request-vote-from-friends"><a href="#1-For-request-vote-from-friends" class="headerlink" title="1. For request vote from friends"></a>1. For request vote from friends</h4><p>Click on the 助力好友 btn on the third tab -&gt; mobile display the bottom sheet to select friends -&gt; click submit -&gt;<br>Server side send IM message using the user account to the selected friends with clickable link <EVENT_LINK>?friendUid&#x3D;”<FRIEND_UID>“ -&gt;<br>Open the event page and auto scroll to the 助力好友 billboard section -&gt;<br>the api 5 [5. Get Friend Help Vote Billboard Tab] should provide the friendUid as param, and the return array should have the selected friend CP as first item</p>
 
                 
               </div>

@@ -257,7 +257,22 @@ Sample Response:
       },
       "cp_vote_accumulated": 52000
     }
-  ]
+  ],
+  "my_cp_content": {
+    "left_user_info": {
+      "uid": 110298,
+      "name": "boy",
+      "icon": ".png"
+    },
+    "right_user_info": {
+      "uid": 110299,
+      "name": "girl",
+      "icon": ".png"
+    },
+    "is_cp_available": 1, // 1 for available, 0 for not-available (display find cp btn)
+    "cp_heart_point": 30,
+    "cp_rank": 1, //rank of the cp, start from 1
+  },
 }
 ```
 

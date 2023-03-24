@@ -265,8 +265,8 @@ Sample Response:
 - extra['url'] = <EVENT_URL>
 - extra['image_url'] = <IMAGE_URL> by 大区
 - extra['type'] = 'event_invite'
-- extra['title'] = <EVENT_TITLE> by 大区
-- message.content = '<DESC>'
+- extra['highlight'] = <DESC> -> desc text grey in color
+- message.content = <EVENT_TITLE> by 大区 -> will be bold in im message
 
 ### Complicated Flow
 

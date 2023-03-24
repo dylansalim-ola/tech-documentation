@@ -261,11 +261,18 @@ Sample Response:
 }
 ```
 
+### IM extra fields for api 5 [5. Get Friend Help Vote Billboard Tab]
+- extra['url'] = <EVENT_URL>
+- extra['image_url'] = <IMAGE_URL> by 大区
+- extra['type'] = 'event_invite'
+- extra['title'] = <EVENT_TITLE> by 大区
+- message.content = '<DESC>'
+
 ### Complicated Flow
 
 #### 1. For request vote from friends
 
 Click on the 助力好友 btn on the third tab -> mobile display the bottom sheet to select friends -> click submit ->
-Server side send 系统消息 to the selected friends with clickable link <EVENT_LINK>?friendUid="<FRIEND_UID>" ->
+Server side send IM message using the user account to the selected friends with clickable link <EVENT_LINK>?friendUid="<FRIEND_UID>" ->
 Open the event page and auto scroll to the 助力好友 billboard section ->
 the api 5 [5. Get Friend Help Vote Billboard Tab] should provide the friendUid as param, and the return array should have the selected friend CP as first item

@@ -180,7 +180,7 @@ Sample Response:
   "user_rank_list": [
     // if there is any user in the rank return the list of items, if not, return empty array, do not return null
     {
-      "rank_id": 12,
+      "cp_id": 12,
       "rank_idx": 1,
       "left_user_info": {
         "uid": 110298,
@@ -218,7 +218,7 @@ Sample Request:
 
 ```json lines
 {
-  "rank_id": 3,
+  "cp_id": 3,
   "vote_amount": 2
 }
 ```

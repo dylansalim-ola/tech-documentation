@@ -9,7 +9,7 @@ tags:
 math: true
 mermaid: true
 sticky: 100
-date: 2023-03-08 18:26:00
+date: 2023-03-27 11:12:00
 ---
 
 > 最佳情侣 pk 赛活动接口文档，Ticket: https://github.com/olachat/veeka/issues/6199

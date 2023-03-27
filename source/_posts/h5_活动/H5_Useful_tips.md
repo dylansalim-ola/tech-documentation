@@ -8,7 +8,6 @@ tags:
   - H5
 math: true
 mermaid: true
-sticky: 100
 date: 2023-03-15 18:26:00
 ---
 >H5 Useful tips

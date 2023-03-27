@@ -16,25 +16,24 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="AgileKit Docs and usage，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;agilekit">
+    <meta name="description" content="H5 Proto to Typescriptprotoc –plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto –ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto –ts_proto_opt&#x3D;forceLong">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AgileKit">
-<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/agilekit/agilekit_intro_usage.html">
+<meta property="og:title" content="Technical note">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/technical_note.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="AgileKit Docs and usage，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;agilekit">
+<meta property="og:description" content="H5 Proto to Typescriptprotoc –plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto –ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto –ts_proto_opt&#x3D;forceLong">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agilekit.png">
-<meta property="article:published_time" content="2023-03-09T10:26:00.000Z">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
+<meta property="article:published_time" content="2023-03-27T03:48:00.000Z">
 <meta property="article:modified_time" content="2023-03-27T04:55:11.564Z">
 <meta property="article:author" content="Dylan">
-<meta property="article:tag" content="AgileKit">
-<meta property="article:tag" content="Github Project">
+<meta property="article:tag" content="Technical note">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agilekit.png">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
   
   
   
-  <title>AgileKit - Dylan的文档</title>
+  <title>Technical note - Dylan的文档</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AgileKit"></span>
+            <span id="subtitle" data-typed-text="Technical note"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-09 18:26" pubdate>
-          March 9, 2023 pm
+        <time datetime="2023-03-27 11:48" pubdate>
+          March 27, 2023 am
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          832 words
+          737 words
         
       </span>
     
@@ -272,34 +271,14 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">AgileKit</h1>
+            <h1 style="display: none">Technical note</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>AgileKit Docs and usage，Ticket: <a target="_blank" rel="noopener" href="https://github.com/olachat/agilekit">https://github.com/olachat/agilekit</a></p>
-</blockquote>
-<span id="more"></span>
-<h1 id="agilekit"><a href="#agilekit" class="headerlink" title="agilekit"></a>agilekit</h1><p>Go project to organize and process github issues.</p>
-<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
-<li>go version 1.19</li>
-</ul>
-<h2 id="To-generate-CSV-file"><a href="#To-generate-CSV-file" class="headerlink" title="To generate CSV file"></a>To generate CSV file</h2><ol>
-<li>Update the conf.toml<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">app</span>]<br><span class="hljs-string">port=5555</span><br><span class="hljs-string">GithubToken=&quot;YOUR_GITHUB_TOKEN&quot;</span><br><span class="hljs-string">OrgName=&quot;olachat&quot;</span><br><span class="hljs-string">ProjectNumber=12380446</span><br><span class="hljs-string">TeamName=&quot;veeka&quot;</span><br><span class="hljs-string">GithubAPIUrl=&quot;https://api.github.com/&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li>Generate CSV Files<br>a. Generate for all sprints<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-all <br></code></pre></td></tr></table></figure></li>
-</ol>
-<p>b. Generate for current sprint only</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-current <br></code></pre></td></tr></table></figure>
-
-
-<h2 id="To-Archive-old-issues"><a href="#To-Archive-old-issues" class="headerlink" title="To Archive old issues"></a>To Archive old issues</h2><ol>
-<li><p>Dry run to view the closable issues available</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive <br></code></pre></td></tr></table></figure>
-</li>
-<li><p>Execute close command to all closable issues <br>(WARNING: Run this cmd only when you know what you are doing)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive-exec<br></code></pre></td></tr></table></figure></li>
-</ol>
+                <h2 id="H5-Proto-to-Typescript"><a href="#H5-Proto-to-Typescript" class="headerlink" title="H5 Proto to Typescript"></a>H5 Proto to Typescript</h2><p>protoc –plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto –ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto –ts_proto_opt&#x3D;forceLong&#x3D;string –ts_proto_opt&#x3D;env&#x3D;browser</p>
+<h2 id="Mobx-generation"><a href="#Mobx-generation" class="headerlink" title="Mobx generation"></a>Mobx generation</h2><p>flutter pub run mobx_bin:gen -s banban_base&#x2F;bbroom&#x2F;lib&#x2F;src&#x2F;lucky_wheel&#x2F;store&#x2F;lucky_wheel_store.dart</p>
+<h2 id="Reload"><a href="#Reload" class="headerlink" title="Reload"></a>Reload</h2><p>curl –location –request POST ‘<a target="_blank" rel="noopener" href="http://vk.sgola.cc/go/Payment/InternalCreditAccount">http://vk.sgola.cc/go/Payment/InternalCreditAccount</a>‘ <br>–header ‘Content-Type: application&#x2F;json’ <br>–data-raw ‘{“userID”:”112684”, type”:”gold_normal”,”operation”:”income”,”amount”:”99999”,”expiry”:”2023-10-01T00:00:00Z”,”trxType”:”internal_iap”,”trxID”:”1”,”trxUniqueKey”:””,”subject”:”加钱”,”opDetail”:{“scenario”:”test”,”extra”:{}}}’</p>
 
                 
               </div>
@@ -318,8 +297,15 @@
     
       <span class="category-chain">
         
-  <a href="/tech-documentation/categories/agilekit/" class="category-chain-item">agilekit</a>
+  <a href="/tech-documentation/categories/practice/" class="category-chain-item">practice</a>
   
+  
+    <span>></span>
+    
+  <a href="/tech-documentation/categories/practice/technical-note/" class="category-chain-item">technical_note</a>
+  
+  
+
   
 
       </span>
@@ -333,9 +319,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tech-documentation/tags/AgileKit/">#AgileKit</a>
-      
-        <a href="/tech-documentation/tags/Github-Project/">#Github Project</a>
+        <a href="/tech-documentation/tags/Technical-note/">#Technical note</a>
       
     </div>
   
@@ -347,8 +331,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AgileKit</div>
-      <div>https://dylansalim-ola.github.io/tech-documentation/post/agilekit/agilekit_intro_usage.html</div>
+      <div>Technical note</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/technical_note.html</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +344,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 9, 2023</div>
+          <div>March 27, 2023</div>
         </div>
       
       
@@ -398,9 +382,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tech-documentation/post/veeka_mobile/rtc/rtc.html" title="Agora &amp; BBRTC Debug steps">
+                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/backup_love_letter.html" title="backup_love_letter">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Agora &amp; BBRTC Debug steps</span>
+                        <span class="hidden-mobile">backup_love_letter</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -408,8 +392,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/Ramadan_event.html" title="Ramadan 活动">
-                        <span class="hidden-mobile">Ramadan 活动</span>
+                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/H5_CP_PK_event.html" title="最佳情侣pk赛活动">
+                        <span class="hidden-mobile">最佳情侣pk赛活动</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -432,7 +416,7 @@
         var options = Object.assign(
           {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
           {
-            id: 'bed13be556e3fb6e9da1bb0a9ad9433e'
+            id: '07095beb6fe184a1051b6c3e36a4e21f'
           }
         )
         var gitalk = new Gitalk(options);

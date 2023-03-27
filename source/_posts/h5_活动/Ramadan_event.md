@@ -1,7 +1,7 @@
 ---
 title: Ramadan 活动
 index_img: >-
-  https://rmt.dogedoge.com/fetch/fluid/storage/hello-fluid/cover.png?w=480&fmt=webp
+  /images/ramadan-event.png
 author: Dylan
 tags:
   - 接口文档

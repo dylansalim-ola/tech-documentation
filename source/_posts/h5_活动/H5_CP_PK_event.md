@@ -43,13 +43,7 @@ Sample Response:
     },
     "is_cp_available": 1, // 1 for available, 0 for not-available (display find cp btn)
     "cp_heart_point": 30,
-    "cp_rank": 1, //rank of the cp, start from 1
-    "transaction_history": [
-      {
-        "title": "收获礼物",
-        "cp_heart_point": 200
-      }
-    ]
+    "cp_rank": 1 //rank of the cp, start from 1
   },
   "receive_heart_point_content": {
     "gift_tab_content": {
@@ -194,16 +188,6 @@ Sample Response:
       },
       "cp_vote_accumulated": 52000
     }
-  ],
-  "transaction_history": [
-    {
-      "title": "充值",
-      "cp_heart_point": 200
-    },
-    {
-      "title": "助力<朋友A>CP<朋友CP>",
-      "cp_heart_point": 10
-    }
   ]
 }
 ```
@@ -273,6 +257,45 @@ Sample Response:
     "cp_heart_point": 30,
     "cp_rank": 1, //rank of the cp, start from 1
   },
+}
+```
+
+
+### 8. Heart Transaction History
+
+Desc: CP Heart Transaction History
+
+URL: /activity/best_cp_pk_event/GetHeartTransactionHistory
+
+Sample Response:
+
+```json lines
+{
+  "transaction_history": [
+      {
+        "title": "收获礼物",
+        "cp_heart_point": 200
+      }
+    ]
+}
+```
+
+### 8. Friend Help Transaction History
+
+Desc: Friend Help Transaction History
+
+URL: /activity/best_cp_pk_event/GetFriendHelpTransactionHistory
+
+Sample Response:
+
+```json lines
+{
+  "transaction_history": [
+      {
+        "title": "收获礼物",
+        "cp_heart_point": 200
+      }
+    ]
 }
 ```
 

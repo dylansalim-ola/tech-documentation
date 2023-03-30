@@ -85,6 +85,25 @@ Sample Response:
         }
       ] // top 5 friend who voted for you, if empty return []
     }
+  },
+  "rule_content": {
+    "reward_list": [
+      {
+        "rank": "TOP 1",
+        [
+        {
+          "prize_type": "gift",
+          "name": "钱兔似锦",
+          "gold_bean_price": "100",
+          "desc": "x2",
+          "gift": {
+            "gift_id": 0,
+            "icon": "/.png"
+          }
+        }
+      ]
+      }
+    ]
   }
 }
 ```
@@ -123,7 +142,7 @@ Sample Response:
       "max_progress_point": 3,
       "cp_heart_point": 30,
       "btn_text": "签到",
-      "status": "UNCLAIMED" //enum of {UNCLAIMED, CLAIMED, UNAVAILABLE}
+      "status": "UNCLAIMED" //enum of {UNCLAIMED, CLAIMED, UNAVAILABLE, GO_POST_MOMENT}
     }
   ]
 }
@@ -255,11 +274,10 @@ Sample Response:
     },
     "is_cp_available": 1, // 1 for available, 0 for not-available (display find cp btn)
     "cp_heart_point": 30,
-    "cp_rank": 1, //rank of the cp, start from 1
-  },
+    "cp_rank": 1 //rank of the cp, start from 1
+  }
 }
 ```
-
 
 ### 8. Heart Transaction History
 
@@ -272,11 +290,11 @@ Sample Response:
 ```json lines
 {
   "transaction_history": [
-      {
-        "title": "收获礼物",
-        "cp_heart_point": 200
-      }
-    ]
+    {
+      "title": "收获礼物",
+      "cp_heart_point": 200
+    }
+  ]
 }
 ```
 
@@ -291,15 +309,16 @@ Sample Response:
 ```json lines
 {
   "transaction_history": [
-      {
-        "title": "收获礼物",
-        "cp_heart_point": 200
-      }
-    ]
+    {
+      "title": "收获礼物",
+      "cp_heart_point": 200
+    }
+  ]
 }
 ```
 
 ### IM extra fields for api 5 [5. Get Friend Help Vote Billboard Tab]
+
 - extra['url'] = <EVENT_URL>
 - extra['image_url'] = <IMAGE_URL> by 大区
 - extra['type'] = 'event_invite'

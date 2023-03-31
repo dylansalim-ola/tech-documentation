@@ -1,0 +1,850 @@
+
+
+<!DOCTYPE html>
+<html lang="en" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="/tech-documentation/img/fluid.png">
+  <link rel="icon" href="/tech-documentation/img/fluid.png">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="Dylan">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto --ts_proto_opt&#x3D;forceLong&#x3D;string --ts_proto_opt&#x3D;env&#x3D;browser  Veeka">
+<meta property="og:type" content="article">
+<meta property="og:title" content="H5 React Technical note">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/h5_technical_note.html">
+<meta property="og:site_name" content="Dylan的文档">
+<meta property="og:description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto --ts_proto_opt&#x3D;forceLong&#x3D;string --ts_proto_opt&#x3D;env&#x3D;browser  Veeka">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
+<meta property="article:published_time" content="2023-03-31T03:48:00.000Z">
+<meta property="article:modified_time" content="2023-03-31T04:35:42.162Z">
+<meta property="article:author" content="Dylan">
+<meta property="article:tag" content="Technical note">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
+  
+  
+  
+  <title>H5 React Technical note - Dylan的文档</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/tech-documentation/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/tech-documentation/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/tech-documentation/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"dylansalim-ola.github.io","root":"/tech-documentation/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":"LyT8mpSI2Jq9CRhOtNOgBXkE-9Nh9j0Va","app_key":"fUOlkXhD9wcmxOTed9NdlqPH","server_url":"https://lyt8mpsi.lc-cn-e1-shared.com","path":"window.location.pathname","ignore_local":false}},"search_path":"/tech-documentation/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/tech-documentation/js/utils.js" ></script>
+  <script  src="/tech-documentation/js/color-schema.js" ></script>
+  
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/tech-documentation/">
+      <strong>Dylan的文档</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>Home</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>Archives</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>Categories</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>Tags</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tech-documentation/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>About</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('https://rmt.dogedoge.com/fetch/fluid/storage/bg/vdysjx.png?w=1920&fmt=webp') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle" data-typed-text="H5 React Technical note"></span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-03-31 11:48" pubdate>
+          March 31, 2023 am
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          8.5k words
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          71 mins
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">H5 React Technical note</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h2 id="H5-Proto-to-Typescript"><a href="#H5-Proto-to-Typescript" class="headerlink" title="H5 Proto to Typescript"></a>H5 Proto to Typescript</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/cp_valentine_event.proto --ts_proto_opt=forceLong=string --ts_proto_opt=<span class="hljs-built_in">env</span>=browser<br></code></pre></td></tr></table></figure>
+
+<h2 id="Veeka-H5-Template-API-caching-state-management-easy-styling"><a href="#Veeka-H5-Template-API-caching-state-management-easy-styling" class="headerlink" title="Veeka H5 Template (API caching + state management + easy styling)"></a>Veeka H5 Template (API caching + state management + easy styling)</h2><h3 id="Slide-Demo-https-docs-google-com-presentation-d-1DPcB5lB6Esmf8gF42XMDSnbSejtVU6SZPph78rFzOQc-edit-usp-sharing"><a href="#Slide-Demo-https-docs-google-com-presentation-d-1DPcB5lB6Esmf8gF42XMDSnbSejtVU6SZPph78rFzOQc-edit-usp-sharing" class="headerlink" title="Slide Demo: https://docs.google.com/presentation/d/1DPcB5lB6Esmf8gF42XMDSnbSejtVU6SZPph78rFzOQc/edit?usp=sharing"></a>Slide Demo: <a target="_blank" rel="noopener" href="https://docs.google.com/presentation/d/1DPcB5lB6Esmf8gF42XMDSnbSejtVU6SZPph78rFzOQc/edit?usp=sharing">https://docs.google.com/presentation/d/1DPcB5lB6Esmf8gF42XMDSnbSejtVU6SZPph78rFzOQc/edit?usp=sharing</a></h3><h3 id="Repo-link-https-github-com-olaola-chat-web-veeka-page-tree-master-veeka-h5-template"><a href="#Repo-link-https-github-com-olaola-chat-web-veeka-page-tree-master-veeka-h5-template" class="headerlink" title="Repo link: https://github.com/olaola-chat/web-veeka-page/tree/master/veeka-h5-template"></a>Repo link: <a target="_blank" rel="noopener" href="https://github.com/olaola-chat/web-veeka-page/tree/master/veeka-h5-template">https://github.com/olaola-chat/web-veeka-page/tree/master/veeka-h5-template</a></h3><h3 id="Ticket-link-https-github-com-olachat-veeka-issues-4541"><a href="#Ticket-link-https-github-com-olachat-veeka-issues-4541" class="headerlink" title="Ticket link: https://github.com/olachat/veeka/issues/4541"></a>Ticket link: <a target="_blank" rel="noopener" href="https://github.com/olachat/veeka/issues/4541">https://github.com/olachat/veeka/issues/4541</a></h3><h3 id="Please-read-the-following-before-using-this-template"><a href="#Please-read-the-following-before-using-this-template" class="headerlink" title="Please read the following before using this template:"></a>Please read the following before using this template:</h3><h3 id="Things-to-update"><a href="#Things-to-update" class="headerlink" title="Things to update:"></a>Things to update:</h3><ol>
+<li>Update the vite.config.ts, set viewportWidth to 375px<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-title function_">postcssPX2viewport</span>(&#123;<br>      <span class="hljs-attr">unitToConvert</span>: <span class="hljs-string">&#x27;px&#x27;</span>,<br>      <span class="hljs-comment">// viewportWidth: 375, //use this for new project</span><br>      <span class="hljs-attr">viewportWidth</span>: <span class="hljs-number">750</span>,<br>      <span class="hljs-attr">unitPrecision</span>: <span class="hljs-number">5</span>,<br>      <span class="hljs-attr">propList</span>: [<span class="hljs-string">&#x27;*&#x27;</span>],<br>      <span class="hljs-attr">viewportUnit</span>: <span class="hljs-string">&#x27;vw&#x27;</span>,<br>      <span class="hljs-attr">fontViewportUnit</span>: <span class="hljs-string">&#x27;vw&#x27;</span>,<br>      <span class="hljs-attr">selectorBlackList</span>: [],<br>      <span class="hljs-attr">minPixelValue</span>: <span class="hljs-number">1</span>,<br>      <span class="hljs-attr">mediaQuery</span>: <span class="hljs-literal">false</span>,<br>      <span class="hljs-attr">replace</span>: <span class="hljs-literal">true</span>,<br>      <span class="hljs-attr">exclude</span>: <span class="hljs-literal">undefined</span>,<br>      <span class="hljs-attr">include</span>: <span class="hljs-literal">undefined</span>,<br>      <span class="hljs-attr">landscape</span>: <span class="hljs-literal">false</span>,<br>      <span class="hljs-attr">landscapeUnit</span>: <span class="hljs-string">&#x27;vw&#x27;</span>,<br>      <span class="hljs-attr">landscapeWidth</span>: <span class="hljs-number">568</span><br>  &#125;)<br></code></pre></td></tr></table></figure></li>
+<li>Alter&#x2F;Remove the following files according to project needs: <br><figure class="highlight jboss-cli"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs jboss-cli"><span class="hljs-params">---</span> <span class="hljs-string">/src</span><br>    <span class="hljs-params">---</span> components<br>    <span class="hljs-params">---</span> <span class="hljs-string">/context</span><br>        <span class="hljs-params">---</span> <span class="hljs-string">/globalContext/useBillboardTabIndex.ts</span><br>        <span class="hljs-params">---</span> <span class="hljs-string">/Tabs</span><br>    <span class="hljs-params">---</span> <span class="hljs-string">/hooks</span><br>    <span class="hljs-params">---</span> <span class="hljs-string">/locale</span><br>    <span class="hljs-params">---</span> <span class="hljs-string">/pages</span><br>    <span class="hljs-params">---</span> <span class="hljs-string">/service</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="Motivation"><a href="#Motivation" class="headerlink" title="Motivation"></a>Motivation</h3><p>Serve as a standardized H5 template for easy project creation and example to showcase the power of React Query to handle server side state + API caching and windicss for utility class styling <br><br>It includes:</p>
+<ul>
+<li>React Query for caching and easy configuration with API for handling server state</li>
+<li>Custom context level state management for non-server state</li>
+<li>Windicss for easy styling</li>
+<li>Clean up unused components file</li>
+<li>Pre-configure to work for our use cases</li>
+</ul>
+<h3 id="Why-API-Caching-in-H5-activity"><a href="#Why-API-Caching-in-H5-activity" class="headerlink" title="Why API Caching in H5 activity"></a>Why API Caching in H5 activity</h3><p>API caching is useful for the following scenarios:</p>
+<ol>
+<li>Multi page activity page</li>
+<li>Activity page with refetching function. Instead of clearing all the data during refetching, we can display previous cache data while display new data when it is done, this provides a better user experience for user with slower internet connection. However, a different loading mechanism for refetching will need to be introduced. Refer to the what’s next section for more. <br><br>(*First loading and refetching will need to have separate mechanism)</li>
+</ol>
+<h3 id="Important-Dependencies-and-its-usage"><a href="#Important-Dependencies-and-its-usage" class="headerlink" title="Important Dependencies and its usage:"></a>Important Dependencies and its usage:</h3><ul>
+<li>@tanstack&#x2F;react-query<br><br>Library for data fetching, caching, synchronizing API state.<br><br>Read more: <a target="_blank" rel="noopener" href="https://tanstack.com/query/v4/docs/overview">https://tanstack.com/query/v4/docs/overview</a> <br><br><a target="_blank" rel="noopener" href="https://tkdodo.eu/blog/practical-react-query">https://tkdodo.eu/blog/practical-react-query</a></li>
+<li>@tanstack&#x2F;react-query-devtools<br><br>React Query devtools that only available in local</li>
+<li>windicss<br><br>Windi CSS as an on-demand alternative to Tailwind, which provides faster load times<br><br>Read more: <a target="_blank" rel="noopener" href="https://windicss.org/guide/">https://windicss.org/guide/</a> <br></li>
+<li>uuid</li>
+<li>react-fast-marquee</li>
+<li>@ola&#x2F;app<br><br>Ola app initialization and environment setup</li>
+<li>@ola&#x2F;native<br><br>Connection to the native bridge of the flutter app</li>
+<li>@ola&#x2F;utils<br><br>Includes utils to get lan, countdown</li>
+<li>vconsole<br><br>H5 console that is similar to chrome dev tools<br><br>add ?console&#x3D;1 to enable it<br></li>
+<li>@ola&#x2F;zh-scanner<br><br>Translation <br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">pnpm run scanner<br></code></pre></td></tr></table></figure></li>
+</ul>
+<h3 id="FAQs-amp-Best-Practices"><a href="#FAQs-amp-Best-Practices" class="headerlink" title="FAQs &amp; Best Practices"></a>FAQs &amp; Best Practices</h3><ol>
+<li>Why React-Query?</li>
+</ol>
+<ul>
+<li>To simplify the process of dealing with API results and persisting the state<br></li>
+<li>Compare both current project &amp; monopoly battle, and you will find out which one is easier<ul>
+<li>Current example project: global useState + React Query</li>
+<li>monopoly-battle project: Global store <br></li>
+</ul>
+</li>
+<li>Read more @ the ‘Important dependencies’ section</li>
+</ul>
+<ol start="2">
+<li>How to use React-Query<br><br>Refer to the example: <a target="_blank" rel="noopener" href="https://github.com/nguyenhieptech/react-query-ts">https://github.com/nguyenhieptech/react-query-ts</a><br><br>Do take note that we are using v4 instead of the v3 in the example<br></li>
+<li>How to avoid React ‘Props Drilling’</li>
+</ol>
+<ul>
+<li>No real answers. Suggestions as follows:<br>a. Use of global useState context AND&#x2F;OR context store AND&#x2F;OR React Query<ul>
+<li>Current example project: Global useState + React Query</li>
+<li>monopoly-battle project: Global context store <br><br>b. Component composition<figure class="highlight typescript"><figcaption><span>jsx</span></figcaption><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">function</span> <span class="hljs-title function_">App</span>(<span class="hljs-params"></span>) &#123;<br>  <span class="hljs-keyword">const</span> [user, setState] = <span class="hljs-title function_">useState</span>(&#123; <span class="hljs-attr">name</span>: <span class="hljs-string">&quot;Steve&quot;</span> &#125;);<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">Navbar</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">MainPage</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">Content</span>&gt;</span></span><br><span class="language-xml">          <span class="hljs-tag">&lt;<span class="hljs-name">Message</span> <span class="hljs-attr">user</span>=<span class="hljs-string">&#123;user&#125;</span> /&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;/<span class="hljs-name">Content</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">MainPage</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br>  );<br>&#125;<br></code></pre></td></tr></table></figure>
+Read more @ <a target="_blank" rel="noopener" href="https://blog.logrocket.com/solving-prop-drilling-react-apps/">https://blog.logrocket.com/solving-prop-drilling-react-apps/</a></li>
+</ul>
+</li>
+</ul>
+<ol start="4">
+<li>How to deal with translation that have variables at the middle?</li>
+</ol>
+<ul>
+<li>Use a js&#x2F;ts file to export it and upload it to crowdin<br><br>Example file: &#x2F;veeka-pupular&#x2F;locale&#x2F;en.js<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">const</span> locale = &#123;<br>  <span class="hljs-attr">upgrade_rule_example_2</span>:<br>    <span class="hljs-string">&#x27;For example, if you become an “Influencer” on &lt;b&gt;1 January&lt;/b&gt; , which requires &lt;b&gt;5,000 points&lt;/b&gt; to upgrade to &lt;b&gt;“Starlet”&lt;/b&gt; and &lt;b&gt;600&lt;/b&gt; points to maintain:&#x27;</span>&#125;<br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> locale<br></code></pre></td></tr></table></figure></li>
+</ul>
+<ol start="5">
+<li>Import image assets dynamically<br><br>For background, vite uses esbuild for local&#x2F;development build &amp; rollup as bundler in production. <br><br>Although the dynamic import via variable does work in dev (esbuild), Rollup does not support dynamic import with variable string.<br><br>It only supports dynamic imports in pure string format.<br><br>Therefore, dynamic imports will looks like this:<br><br>Example file: &#x2F;src&#x2F;assets&#x2F;dynamic_import_assets.js<figure class="highlight typescript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><code class="hljs typescript"><span class="hljs-keyword">const</span> <span class="hljs-attr">dynamicImportAssets</span>: <span class="hljs-function">(<span class="hljs-params">language: <span class="hljs-built_in">string</span></span>) =&gt;</span> <span class="hljs-title class_">Promise</span>&lt;<span class="hljs-built_in">any</span>&gt; = <span class="hljs-function">(<span class="hljs-params"></span></span><br><span class="hljs-params"><span class="hljs-function">  language: <span class="hljs-built_in">string</span></span></span><br><span class="hljs-params"><span class="hljs-function"></span>) =&gt;</span> &#123;<br>  <span class="hljs-keyword">switch</span> (language) &#123;<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;en&#x27;</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_en.png&#x27;</span>)<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;zh_tw&#x27;</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_zh_tw.png&#x27;</span>)<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;id&#x27;</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_id.png&#x27;</span>)<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;pt&#x27;</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_pt.png&#x27;</span>)<br>    <span class="hljs-keyword">case</span> <span class="hljs-string">&#x27;th&#x27;</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_th.png&#x27;</span>)<br>    <span class="hljs-attr">default</span>:<br>      <span class="hljs-keyword">return</span> <span class="hljs-keyword">import</span>(<span class="hljs-string">&#x27;./title/title_zh_cn.png&#x27;</span>)<br>  &#125;<br>&#125;<br></code></pre></td></tr></table></figure>
+A few items to take note when using dynamic imports:</li>
+</ol>
+<ul>
+<li>Place the exported module ts file in the assets directory, as rollup will rename the image name and path during build time.<br></li>
+<li>Use vite version 3 and above</li>
+</ul>
+<ol start="6">
+<li>Display modal<br>Modal.show (Example file: &#x2F;src&#x2F;components&#x2F;Modal&#x2F;modal.tsx)</li>
+<li>Where to put Custom state provider<br>Not necessary on the root level, can be a level before the component<figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><code class="hljs javascript"><span class="hljs-keyword">const</span> <span class="hljs-title function_">HomeProvider</span> = (<span class="hljs-params"></span>) =&gt; &#123;<br>  <span class="hljs-keyword">return</span> (<br>    <span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">MainPageRespProvider</span>&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;<span class="hljs-name">BillboardRespProvider</span>&gt;</span></span><br><span class="language-xml">        <span class="hljs-tag">&lt;<span class="hljs-name">Home</span> /&gt;</span></span><br><span class="language-xml">      <span class="hljs-tag">&lt;/<span class="hljs-name">BillboardRespProvider</span>&gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;/<span class="hljs-name">MainPageRespProvider</span>&gt;</span></span><br>  )<br>&#125;<br><br><span class="hljs-keyword">export</span> <span class="hljs-keyword">default</span> <span class="hljs-title class_">HomeProvider</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>Then we can have a suspense loading for each component</p>
+<figure class="highlight django"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><code class="hljs django"><span class="language-xml"><span class="hljs-tag">&lt;<span class="hljs-name">Suspense</span> <span class="hljs-attr">fallback</span>=<span class="hljs-string">&#123;</span>&lt;<span class="hljs-attr">Loading</span> /&gt;</span>&#125;&gt;</span><br><span class="language-xml">  <span class="hljs-tag">&lt;<span class="hljs-name">div</span></span></span><br><span class="hljs-tag"><span class="language-xml">    <span class="hljs-attr">className</span>=<span class="hljs-string">&#123;</span>`<span class="hljs-attr">fixed</span> <span class="hljs-attr">bottom-0</span> <span class="hljs-attr">w-full</span> <span class="hljs-attr">z-40</span> $&#123;</span></span><br><span class="hljs-tag"><span class="language-xml">      <span class="hljs-attr">DeviceInfo.isIphoneHigher</span> ? &#x27;<span class="hljs-attr">h-</span>[<span class="hljs-attr">174px</span>]&#x27; <span class="hljs-attr">:</span> &#x27;<span class="hljs-attr">h-</span>[<span class="hljs-attr">130px</span>]&#x27;</span></span><br><span class="hljs-tag"><span class="language-xml">    &#125;`&#125;</span></span><br><span class="hljs-tag"><span class="language-xml">  &gt;</span></span><br><span class="language-xml">    <span class="hljs-tag">&lt;<span class="hljs-name">BillboardSelfRanking</span> /&gt;</span></span><br><span class="language-xml">  <span class="hljs-tag">&lt;/<span class="hljs-name">div</span>&gt;</span></span><br><span class="language-xml"><span class="hljs-tag">&lt;/<span class="hljs-name">Suspense</span>&gt;</span></span><br></code></pre></td></tr></table></figure>
+
+
+<h3 id="Common-issues-and-Ways-to-fix-it"><a href="#Common-issues-and-Ways-to-fix-it" class="headerlink" title="Common issues and Ways to fix it"></a>Common issues and Ways to fix it</h3><ol>
+<li><p>Dependency registry resolution URL kept default to <a target="_blank" rel="noopener" href="https://dev-page.iambanban.com/registry/">https://dev-page.iambanban.com/registry/</a></p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs awk">WARN GET https:<span class="hljs-regexp">//</span>dev-page.iambanban.com<span class="hljs-regexp">/registry/</span>@tanstack<span class="hljs-regexp">/react-query/</span>-/react-query-<span class="hljs-number">4.16</span>.<span class="hljs-number">1</span>.tgz error (ERR_PNPM_FETCH_404). Will retry <span class="hljs-keyword">in</span> <span class="hljs-number">10</span> seconds. <span class="hljs-number">2</span> retries left.<br>WARN GET https:<span class="hljs-regexp">//</span>dev-page.iambanban.com<span class="hljs-regexp">/registry/</span>@tanstack<span class="hljs-regexp">/query-core/</span>-/query-core-<span class="hljs-number">4.15</span>.<span class="hljs-number">1</span>.tgz error (ERR_PNPM_FETCH_404). Will retry <span class="hljs-keyword">in</span> <span class="hljs-number">10</span> seconds. <span class="hljs-number">2</span> retries left.<br>WARN GET https:<span class="hljs-regexp">//</span>dev-page.iambanban.com<span class="hljs-regexp">/registry/</span>@tanstack<span class="hljs-regexp">/match-sorter-utils/</span>-/match-sorter-utils-<span class="hljs-number">8.1</span>.<span class="hljs-number">1</span>.tgz error (ERR_PNPM_FETCH_404). Will retry <span class="hljs-keyword">in</span> <span class="hljs-number">10</span> seconds. <span class="hljs-number">2</span> retries left.<br>WARN GET https:<span class="hljs-regexp">//</span>dev-page.iambanban.com<span class="hljs-regexp">/registry/</span>@tanstack<span class="hljs-regexp">/react-query-devtools/</span>-/react-query-devtools-<span class="hljs-number">4.16</span>.<span class="hljs-number">1</span>.tgz error (ERR_PNPM_FETCH_404). Will retry <span class="hljs-keyword">in</span> <span class="hljs-number">1</span><br></code></pre></td></tr></table></figure>
+<p>Reason: Production build command will set a default registry<br></p>
+<figure class="highlight routeros"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs routeros">-- PRODUCTION<span class="hljs-built_in"> SCRIPT</span><br><span class="hljs-built_in"></span>npm<span class="hljs-built_in"> config </span><span class="hljs-built_in">set</span> <span class="hljs-attribute">registry</span>=https://dev-page.iambanban.com/registry/ &amp;&amp;<br><span class="hljs-literal">yes</span> | npx kort build --selector <span class="hljs-variable">$selector</span> --webhook <span class="hljs-variable">$robot</span> --sender <span class="hljs-variable">$sender</span><br></code></pre></td></tr></table></figure>
+<p>Solution: Force the dependency back to the original npm registry link<br></p>
+<figure class="highlight ruby"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><code class="hljs ruby">registry=<span class="hljs-symbol">https:</span>/<span class="hljs-regexp">/registry.npm.taobao.org/</span><br><span class="hljs-variable">@ola</span><span class="hljs-symbol">:registry=https</span><span class="hljs-symbol">://dev-page</span>.iambanban.com/registry/<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Build failed but the log is showing that the dependency is downloading<br></p>
+<figure class="highlight subunit"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><code class="hljs subunit"><span class="hljs-keyword">Progress: </span>resolved 1, reused 0, downloaded 0, added 0<br>Packages: <span class="hljs-string">+232</span><br>++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++<br>Packages are hard linked from the content-addressable store to the virtual store.<br> Content-addressable store is at: /root/workspace/.pnpm-store/v3<br> Virtual store is at:             node_modules/.pnpm<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 40, added 40<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 90, added 91<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 141, added 142<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 175, added 176<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 200, added 200<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 215, added 216<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 219, added 220<br><span class="hljs-keyword">Progress: </span>resolved 232, reused 0, downloaded 221, added 222<br></code></pre></td></tr></table></figure>
+<p>Reason: Download timeout<br><br>Solution: Retrigger the dependency download process by changing a small part in the code and push to master<br></p>
+</li>
+</ol>
+<h3 id="Future-project-structure-direction-One-project-rule-it-all-VS-Multiple-project-for-different-events"><a href="#Future-project-structure-direction-One-project-rule-it-all-VS-Multiple-project-for-different-events" class="headerlink" title="Future project structure direction - One project rule it all VS Multiple project for different events"></a>Future project structure direction - One project rule it all VS Multiple project for different events</h3><p>For new H5 event, create new project <br><br>For static H5 event, use veeka-static instead <br><br>Reason: Create all H5 event in a single monolith project does not reduce much server loads + storage and tends to have higher risks of affecting one another. </p>
+<h3 id="What’s-next"><a href="#What’s-next" class="headerlink" title="What’s next:"></a>What’s next:</h3><ul>
+<li>Protobuf with React (Currently only HTTPS API is supported)</li>
+<li>Standardized loading page + refetching style</li>
+</ul>
+<h3 id="Update-15-Dec-2022"><a href="#Update-15-Dec-2022" class="headerlink" title="Update: 15 Dec 2022"></a>Update: 15 Dec 2022</h3><p>There is a new Flutter web H5 template created by 旋风 team. We will need to take a closer look into template and refine the state management, api caching and easy styling on that template.</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/tech-documentation/categories/practice/" class="category-chain-item">practice</a>
+  
+  
+    <span>></span>
+    
+  <a href="/tech-documentation/categories/practice/technical-note/" class="category-chain-item">technical_note</a>
+  
+  
+
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tech-documentation/tags/Technical-note/">#Technical note</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>H5 React Technical note</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/h5_technical_note.html</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>Author</div>
+          <div>Dylan</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>Posted on</div>
+          <div>March 31, 2023</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>Licensed under</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - Attribution">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - Share-alike">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/backup_love_letter.html" title="backup_love_letter">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">backup_love_letter</span>
+                        <span class="visible-mobile">Previous</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/tech-documentation/post/practice/technical_note/technical_note.html" title="Technical note">
+                        <span class="hidden-mobile">Technical note</span>
+                        <span class="visible-mobile">Next</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="gitalk-container"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#gitalk-container', function() {
+      Fluid.utils.createCssLink('/tech-documentation/css/gitalk.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/gitalk/1.8.0/gitalk.min.js', function() {
+        var options = Object.assign(
+          {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
+          {
+            id: '6217a95ac134aad766baab05dac50d6e'
+          }
+        )
+        var gitalk = new Gitalk(options);
+        gitalk.render('gitalk-container');
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>Table of Contents</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+  
+  
+
+
+
+
+
+  <script>
+  Fluid.utils.createScript('https://lib.baomitu.com/mermaid/8.14.0/mermaid.min.js', function() {
+    mermaid.initialize({"theme":"default"});
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('mermaid' in window) {
+        mermaid.init();
+      }
+    });
+  });
+</script>
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Search</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">Keyword</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/tech-documentation/js/events.js" ></script>
+<script  src="/tech-documentation/js/plugins.js" ></script>
+
+
+  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
+  <script>
+    (function (window, document) {
+      var typing = Fluid.plugins.typing;
+      var subtitle = document.getElementById('subtitle');
+      if (!subtitle || !typing) {
+        return;
+      }
+      var text = subtitle.getAttribute('data-typed-text');
+      
+        typing(text);
+      
+    })(window, document);
+  </script>
+
+
+
+
+  
+    <script  src="/tech-documentation/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  
+      <script>
+        if (!window.MathJax) {
+          window.MathJax = {
+            tex    : {
+              inlineMath: { '[+]': [['$', '$']] }
+            },
+            loader : {
+              load: ['ui/lazy']
+            },
+            options: {
+              renderActions: {
+                insertedScript: [200, () => {
+                  document.querySelectorAll('mjx-container').forEach(node => {
+                    let target = node.parentNode;
+                    if (target.nodeName.toLowerCase() === 'li') {
+                      target.parentNode.classList.add('has-jax');
+                    }
+                  });
+                }, '', false]
+              }
+            }
+          };
+        } else {
+          MathJax.startup.document.state(0);
+          MathJax.texReset();
+          MathJax.typeset();
+          MathJax.typesetPromise();
+        }
+
+        Fluid.events.registerRefreshCallback(function() {
+          if ('MathJax' in window && MathJax.startup.document && typeof MathJax.startup.document.state === 'function') {
+            MathJax.startup.document.state(0);
+            MathJax.texReset();
+            MathJax.typeset();
+            MathJax.typesetPromise();
+          }
+        });
+      </script>
+    
+
+  <script  src="https://lib.baomitu.com/mathjax/3.2.2/es5/tex-mml-chtml.js" ></script>
+
+  <script  src="/tech-documentation/js/local-search.js" ></script>
+
+
+
+
+  
+<script src="/tech-documentation/js/custom.js"></script>
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/tech-documentation/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">Blog works best with JavaScript enabled</div>
+  </noscript>
+</body>
+</html>

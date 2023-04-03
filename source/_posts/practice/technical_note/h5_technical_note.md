@@ -12,7 +12,7 @@ date: 2023-03-31 11:48:00
 
 ## H5 Proto to Typescript
 ```bash
-protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/cp_valentine_event.proto --ts_proto_opt=forceLong=string --ts_proto_opt=env=browser
+protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/best_cp_event.proto --ts_proto_opt=esModuleInterop=true --ts_proto_opt=env=browser
 ```
 
 ## Veeka H5 Template (API caching + state management + easy styling)

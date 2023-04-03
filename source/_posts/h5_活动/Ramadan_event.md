@@ -79,31 +79,31 @@ Sample Response:
 
 ```json lines
 {
-    "free_lottery_available": true,
-    "wallet_amount": 33333,
-    "jackpot": {
-        "amount": 32636,
-        "desc": "Currently, there are 2000 cards combined by 500 lucky people"
+  "free_lottery_available": true,
+  "wallet_amount": 33333,
+  "jackpot": {
+    "amount": 32636,
+    "desc": "Currently, there are 2000 cards combined by 500 lucky people"
+  },
+  "card_stack_info": {
+    "synthesized_amount": 2,
+    "synthesizable": false,
+    "card_1": {
+      "amount": 1
     },
-    "card_stack_info": {
-        "synthesized_amount": 2,
-        "synthesizable": false,
-        "card_1": {
-            "amount": 1
-        },
-        "card_2": {
-            "amount": 0
-        },
-        "card_3": {
-            "amount": 3
-        },
-        "card_4": {
-            "amount": 1
-        },
-        "card_5": {
-            "amount": 0
-        }
-    } // same as API 4
+    "card_2": {
+      "amount": 0
+    },
+    "card_3": {
+      "amount": 3
+    },
+    "card_4": {
+      "amount": 1
+    },
+    "card_5": {
+      "amount": 0
+    }
+  } // same as API 4
 }
 ```
 
@@ -117,15 +117,50 @@ Sample Request:
 
 ```json lines
 {
-    "draw_type": "FREE" // Types -> "FREE", "ONCE", "TEN"
+  "draw_type": "FREE" // Types -> "FREE", "ONCE", "TEN"
 }
 ```
 
 Sample Response:
+
 ```json lines
 {
-    "success": true,
-    "data": //Data from API 2
+  "jackpot_data": {
+    "free_lottery_available": true,
+    "wallet_amount": 33333,
+    "jackpot": {
+      "amount": 32636,
+      "desc": "Currently, there are 2000 cards combined by 500 lucky people"
+    },
+    "card_stack_info": {
+      "synthesized_amount": 2,
+      "synthesizable": false,
+      "card_1": {
+        "amount": 1
+      },
+      "card_2": {
+        "amount": 0
+      },
+      "card_3": {
+        "amount": 3
+      },
+      "card_4": {
+        "amount": 1
+      },
+      "card_5": {
+        "amount": 0
+      }
+    }
+  }, // SAME AS API 2
+  "reward": {
+    "prize_type": "gift",
+    "name": "钱兔似锦",
+    "gold_bean_price": "100",
+    "gift": {
+      "gift_id": 0,
+      "icon": "/.png"
+    }
+  }
 }
 ```
 
@@ -139,25 +174,25 @@ Sample Response:
 
 ```json lines
 {
-    "card_stack_info": {
-        "synthesized_amount": 2,
-        "synthesizable": false,
-        "card_1": {
-            "amount": 1
-        },
-        "card_2": {
-            "amount": 0
-        },
-        "card_3": {
-            "amount": 3
-        },
-        "card_4": {
-            "amount": 1
-        },
-        "card_5": {
-            "amount": 0
-        }
+  "card_stack_info": {
+    "synthesized_amount": 2,
+    "synthesizable": false,
+    "card_1": {
+      "amount": 1
+    },
+    "card_2": {
+      "amount": 0
+    },
+    "card_3": {
+      "amount": 3
+    },
+    "card_4": {
+      "amount": 1
+    },
+    "card_5": {
+      "amount": 0
     }
+  }
 }
 ```
 
@@ -166,4 +201,3 @@ Sample Response:
 Desc: One Bond Synthesis button
 
 URL: /activity/best_cp_pk_event/FriendHelpVoteBillboardTab
-

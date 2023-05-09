@@ -1,0 +1,30 @@
+
+  curl -I -X POST \
+    -H 'user-token: 927aNKHGUBWtwY4Zi__2BmFTLC8hSyWVTx21L0e5dax2Ts7__2Fdrr5Ulw7iSHi3qsZeJZKcPZzCo__2FnAEbk6__2Fvh__2Bd0mY4q6tc' \
+  -H "Origin: http://EXAMPLE.COM" \
+  -H 'Access-Control-Request-Method: POST' \
+    https://vks.sgola.cc/go/UserBase/GetRechargeAgents 2>&1 | grep 'Access-Control-Allow-Origin'
+
+
+  curl -I -X POST \
+    -H 'user-token: 927aNKHGUBWtwY4Zi__2BmFTLC8hSyWVTx21L0e5dax2Ts7__2Fdrr5Ulw7iSHi3qsZeJZKcPZzCo__2FnAEbk6__2Fvh__2Bd0mY4q6tc' \
+  -H "Origin: http://EXAMPLE.COM" \
+  -H 'Access-Control-Request-Method: POST' \
+    https://vks.sgola.cc/go/UserBase/GetRechargeAgents 2>&1 | grep 'Access-Control-Allow-Origin'
+
+    curl -I -X OPTIONS \
+  -H "Origin: http:localhost:8080" \
+  -H 'Access-Control-Request-Method: POST' \
+  "https://vks.sgola.cc/go/UserBase/GetRechargeAgents" 2>&1 | grep -i 'Access-Control-Allow-Origin'
+
+
+
+    curl -I -X OPTIONS \
+  -H "Origin: http:localhost:8080" \
+  -H 'Access-Control-Request-Method: POST' \
+  "https://vks.sgola.cc/go/event.RamadanEvent/RequestCardFriendList" 2>&1 | grep -i 'Access-Control-Allow-Origin'
+  
+  curl -I -X OPTIONS \
+  -H "Origin: http:localhost:8080" \
+  -H 'Access-Control-Request-Method: POST' \
+  "https://vks.sgola.cc/go/event.LuckyCardEvent/RequestCardFriendList" 2>&1 | grep -i 'Access-Control-Allow-Origin'

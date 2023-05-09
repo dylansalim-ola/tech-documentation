@@ -135,7 +135,7 @@
     <link href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/H5_Useful_tips.html"/>
     <url>/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/H5_Useful_tips.html</url>
     
-    <content type="html"><![CDATA[<blockquote><p>H5 Useful tips</p></blockquote><h3 id="Draw-custom-shapes-with-css"><a href="#Draw-custom-shapes-with-css" class="headerlink" title="Draw custom shapes with css"></a>Draw custom shapes with css</h3><p><a href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a></p>]]></content>
+    <content type="html"><![CDATA[<blockquote><p>H5 Useful tips</p></blockquote><h3 id="Draw-custom-shapes-with-css"><a href="#Draw-custom-shapes-with-css" class="headerlink" title="Draw custom shapes with css"></a>Draw custom shapes with css</h3><p><a href="https://bennettfeely.com/clippy/">https://bennettfeely.com/clippy/</a></p><h3 id="Navigation-List"><a href="#Navigation-List" class="headerlink" title="Navigation List"></a>Navigation List</h3><p><a href="https://www.figma.com/file/f6JxRIdSJ9YxWdsHrQC6lg/H5-BUTTON?node-id=0:1&t=216kIMNYg4jWsGzO-1">https://www.figma.com/file/f6JxRIdSJ9YxWdsHrQC6lg/H5-BUTTON?node-id=0%3A1&amp;t=216kIMNYg4jWsGzO-1</a></p><h3 id="Proto-Generation-for-H5"><a href="#Proto-Generation-for-H5" class="headerlink" title="Proto Generation for H5"></a>Proto Generation for H5</h3><p>protoc –plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto –ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;<proto_name>.proto –ts_proto_opt&#x3D;esModuleInterop&#x3D;true –ts_proto_opt&#x3D;env&#x3D;browser</p>]]></content>
     
     
     <categories>

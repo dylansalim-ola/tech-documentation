@@ -43,7 +43,8 @@ Tech Stack: NodeJS
 1. BookStack
 Example: [BookStack Demo](https://demo.bookstackapp.com/)
 [Language Setup Guide](https://www.bookstackapp.com/docs/admin/language-config/)
-
+2. [Hexo](https://hexo.io/)
+Example: [here](https://dylansalim-ola.github.io/tech-documentation/)
 
 ## Open for discussion
 Links:

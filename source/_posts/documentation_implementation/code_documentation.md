@@ -1,7 +1,7 @@
 ---
 title: Code Documentation
 index_img: >-
-  /images/code_documentation.png
+  /images/code_documentation.jpeg
 author: Dylan
 tags:
   - Documentation

@@ -27,24 +27,35 @@ date: 2023-06-14 18:26:00
 [ ] - Try Setup, find useful plugins to include, Deploy
 [ ] - Setup rules and roles in the Tech Documentation
 
+- Criteria for Wiki:
+1. Easy to edit, easy syntax recommendation
+{% asset_img "/images/pm_wiki_edit_1.png" Example 1 %}
+{% asset_img "/images/pm_wiki_edit_2.png" Example 2 %}
+2. Role Permission to edit or view only, allow login
 
 - Wiki Recommendations
 1. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
 Example: [Wikipedia](https://www.wikipedia.org/)
 Tech Stack: PHP
-2. [DocuWiki] (https://www.dokuwiki.org/dokuwiki)
+2. [PmWiki](https://www.pmwiki.org/wiki/PmWiki/PmWiki)
+Tech Stack: PHP
+3. [DocuWiki] (https://www.dokuwiki.org/dokuwiki)
 Example: 
 Tech Stack: PHP
-3. [Wiki.js](https://docs.requarks.io/install/config)
+4. [Wiki.js](https://docs.requarks.io/install/config)
 Tech Stack: NodeJS
-
 
 - Tech Documentation Recommendations
 1. BookStack
 Example: [BookStack Demo](https://demo.bookstackapp.com/)
 [Language Setup Guide](https://www.bookstackapp.com/docs/admin/language-config/)
-2. [Hexo](https://hexo.io/)
+2. [Hexo](https://hexo.io/) - Disadvantage (it is public and requires minor coding)
 Example: [here](https://dylansalim-ola.github.io/tech-documentation/)
+
+Criteria for Tech Documentation:
+1. All users can create new books
+2. All users can comment on existing book
+3. Login feature to disable outsider to enter
 
 ## Open for discussion
 Links:

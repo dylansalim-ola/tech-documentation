@@ -1,7 +1,7 @@
 ---
 title: Wiki Documentation
 index_img: >-
-  /images/wiki.png
+  /images/wiki.jpg
 author: Dylan
 tags:
   - Documentation
@@ -13,13 +13,13 @@ date: 2023-06-14 18:26:00
 
 <!-- more -->
 # Wiki Implementations
-- Aim: To create a centralized, general purpose documentation for all employees in SG team (current state, may be expanded to all in the future)
-- This wiki documentation may consist of 2 parts:
+## Aim: To create a centralized, general purpose documentation for all employees in SG team (current state, may be expanded to all in the future)
+## This wiki documentation may consist of 2 parts:
 1. General Purpose Wiki - Includes links to Google drive, docs, who to contact, short guides (extensive tech documentations should not be included in this wiki)
 2. Tech Documentation - Includes tech-only extensive documentation, frontend and backend (open to discussion whether frontend and backend need to have a separate BookStack)
-- Todo: Implement a wiki page and BookStack. Define the wiki & BookStack roles and rules
+## Todo: Implement a wiki page and BookStack. Define the wiki & BookStack roles and rules
 
-- Details of Todo:
+## Details of Todo:
 [ ] - POC on wiki to choose
 [ ] - Try Setup, find useful plugins to include, Deploy
 [ ] - Setup rules and roles in the wiki
@@ -27,13 +27,13 @@ date: 2023-06-14 18:26:00
 [ ] - Try Setup, find useful plugins to include, Deploy
 [ ] - Setup rules and roles in the Tech Documentation
 
-- Criteria for Wiki:
+## Criteria for Wiki:
 1. Easy to edit, easy syntax recommendation
 {% asset_img "/images/pm_wiki_edit_1.png" Example 1 %}
 {% asset_img "/images/pm_wiki_edit_2.png" Example 2 %}
 2. Role Permission to edit or view only, allow login
 
-- Wiki Recommendations
+## Wiki Recommendations
 1. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
 Example: [Wikipedia](https://www.wikipedia.org/)
 Tech Stack: PHP
@@ -45,7 +45,7 @@ Tech Stack: PHP
 4. [Wiki.js](https://docs.requarks.io/install/config)
 Tech Stack: NodeJS
 
-- Tech Documentation Recommendations
+## Tech Documentation Recommendations
 1. BookStack
 Example: [BookStack Demo](https://demo.bookstackapp.com/)
 [Language Setup Guide](https://www.bookstackapp.com/docs/admin/language-config/)

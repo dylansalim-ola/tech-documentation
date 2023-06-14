@@ -45,17 +45,19 @@ Tech Stack: PHP
 4. [Wiki.js](https://docs.requarks.io/install/config)
 Tech Stack: NodeJS
 
+
+## Criteria for Tech Documentation:
+1. All users can create new books
+2. All users can comment on existing book
+3. Login feature to disable outsider to enter
+   
 ## Tech Documentation Recommendations
 1. BookStack
 Example: [BookStack Demo](https://demo.bookstackapp.com/)
 [Language Setup Guide](https://www.bookstackapp.com/docs/admin/language-config/)
-2. [Hexo](https://hexo.io/) - Disadvantage (it is public and requires minor coding)
+1. [Hexo](https://hexo.io/) - Disadvantage (it is public and requires minor coding)
 Example: [here](https://dylansalim-ola.github.io/tech-documentation/)
-
-Criteria for Tech Documentation:
-1. All users can create new books
-2. All users can comment on existing book
-3. Login feature to disable outsider to enter
+[repo](https://github.com/dylansalim-ola/tech-documentation/)
 
 ## Open for discussion
 Links:

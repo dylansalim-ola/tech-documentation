@@ -13,8 +13,10 @@ date: 2023-06-14 18:26:00
 
 <!-- more -->
 # Code Documentation Implementations
-## Aim: To ease the onboarding process of a new frontend developer into veeka-app, from setup to productions. This documentation should be minimal, short and concise. The complex documentation should be included in the wiki/bookstack.
-## Todo: Rewrite the README.md to acts as an easy setup documentation for newcomers to refer
+## Aim: 
+To ease the onboarding process of a new frontend developer into veeka-app, from setup to productions. This documentation should be minimal, short and concise. The complex documentation should be included in the wiki/bookstack.
+## Todo: 
+Rewrite the README.md to acts as an easy setup documentation for newcomers to refer
 
 ## Details of Todo(Frontend):
 [ ] - Project Setup Guide (Apply flutter.diff, hammer in VSCode)

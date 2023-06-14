@@ -16,16 +16,16 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto --ts_proto_opt&#x3D;forceLong&#x3D;string --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
+    <meta name="description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;recharge_agent.proto --ts_proto_opt&#x3D;esModuleInterop&#x3D;true --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Technical note">
 <meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/technical_note.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;cp_valentine_event.proto --ts_proto_opt&#x3D;forceLong&#x3D;string --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
+<meta property="og:description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;recharge_agent.proto --ts_proto_opt&#x3D;esModuleInterop&#x3D;true --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
 <meta property="og:locale" content="en_US">
 <meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
 <meta property="article:published_time" content="2023-03-27T03:48:00.000Z">
-<meta property="article:modified_time" content="2023-05-09T07:44:04.271Z">
+<meta property="article:modified_time" content="2023-06-14T10:16:54.579Z">
 <meta property="article:author" content="Dylan">
 <meta property="article:tag" content="Technical note">
 <meta name="twitter:card" content="summary_large_image">
@@ -276,7 +276,7 @@
             
               <div class="markdown-body">
                 
-                <h2 id="H5-Proto-to-Typescript"><a href="#H5-Proto-to-Typescript" class="headerlink" title="H5 Proto to Typescript"></a>H5 Proto to Typescript</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/cp_valentine_event.proto --ts_proto_opt=forceLong=string --ts_proto_opt=<span class="hljs-built_in">env</span>=browser<br></code></pre></td></tr></table></figure>
+                <h2 id="H5-Proto-to-Typescript"><a href="#H5-Proto-to-Typescript" class="headerlink" title="H5 Proto to Typescript"></a>H5 Proto to Typescript</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/recharge_agent.proto --ts_proto_opt=esModuleInterop=<span class="hljs-literal">true</span> --ts_proto_opt=<span class="hljs-built_in">env</span>=browser<br></code></pre></td></tr></table></figure>
 
 <h2 id="Mobx-generation"><a href="#Mobx-generation" class="headerlink" title="Mobx generation"></a>Mobx generation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">flutter pub run mobx_bin:gen -s banban_base/bbroom/lib/src/lucky_wheel/store/lucky_wheel_store.dart<br></code></pre></td></tr></table></figure>
 

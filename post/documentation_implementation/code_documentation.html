@@ -16,25 +16,24 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Steps to debug agora and bbrtc  BackgroundAgora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.Agora is used in video room whereas bbrtc is u">
+    <meta name="description" content="Code Documentation Implementation">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Agora &amp; BBRTC Debug steps">
-<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/veeka_mobile/rtc/rtc.html">
+<meta property="og:title" content="Code Documentation">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/documentation_implementation/code_documentation.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="Steps to debug agora and bbrtc  BackgroundAgora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.Agora is used in video room whereas bbrtc is u">
+<meta property="og:description" content="Code Documentation Implementation">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agora.jpg">
-<meta property="article:published_time" content="2023-03-13T10:26:00.000Z">
-<meta property="article:modified_time" content="2023-06-14T10:16:54.583Z">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/code_documentation.png">
+<meta property="article:published_time" content="2023-06-14T10:26:00.000Z">
+<meta property="article:modified_time" content="2023-06-14T10:16:54.579Z">
 <meta property="article:author" content="Dylan">
-<meta property="article:tag" content="Agora">
-<meta property="article:tag" content="BBRTC">
+<meta property="article:tag" content="Documentation">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agora.jpg">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/code_documentation.png">
   
   
   
-  <title>Agora &amp; BBRTC Debug steps - Dylan的文档</title>
+  <title>Code Documentation - Dylan的文档</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Agora &amp; BBRTC Debug steps"></span>
+            <span id="subtitle" data-typed-text="Code Documentation"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-13 18:26" pubdate>
-          March 13, 2023 pm
+        <time datetime="2023-06-14 18:26" pubdate>
+          June 14, 2023 pm
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          892 words
+          823 words
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          8 mins
+          7 mins
         
       </span>
     
@@ -272,30 +271,23 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Agora &amp; BBRTC Debug steps</h1>
+            <h1 style="display: none">Code Documentation</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>Steps to debug agora and bbrtc</p>
+<p>Code Documentation Implementation</p>
 </blockquote>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Agora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.<br>Agora is used in video room whereas bbrtc is used in other room<br>However, due to the network connection issue in some region including Taiwan, Agora is still the default rtc engine to use in Veeka App.</p>
-<h2 id="How-to-determine-if-we-have-agora-x2F-bbrtc-issue"><a href="#How-to-determine-if-we-have-agora-x2F-bbrtc-issue" class="headerlink" title="How to determine if we have agora&#x2F;bbrtc issue"></a>How to determine if we have agora&#x2F;bbrtc issue</h2><p>Check if the following items are having issues:</p>
-<ul>
-<li>Listen music in room</li>
-<li>Video call and see if other can view the video</li>
+<span id="more"></span>
+<h1 id="Code-Documentation-Implementations"><a href="#Code-Documentation-Implementations" class="headerlink" title="Code Documentation Implementations"></a>Code Documentation Implementations</h1><ul>
+<li><p>Aim: To ease the onboarding process of a new frontend developer into veeka-app, from setup to productions. This documentation should be minimal, short and concise. The complex documentation should be included in the wiki&#x2F;bookstack.</p>
+</li>
+<li><p>Todo: Rewrite the README.md to acts as an easy setup documentation for newcomers to refer</p>
+</li>
+<li><p>Details of Todo(Frontend):<br>[ ] - Project Setup Guide (Apply flutter.diff, hammer in VSCode)<br>[ ] - Include script to generate @JsonSerializable g.dart, store g.dart, proto twirp.dart file<br>[ ] - Include guides&#x2F;links to technologies we used, eg. mobx, how to crowdin, how to push assets to oss etc<br>[ ] - Include recommended ways to doing things in this codebase, eg. communication between different subproject<br>[ ] - Brief explanation on how our code base is structured, can use a diagram to illustrate it<br>[ ] - Business logic specific details should not cover in this README.md</p>
+</li>
 </ul>
-<h2 id="Possible-issue"><a href="#Possible-issue" class="headerlink" title="Possible issue"></a>Possible issue</h2><ol>
-<li>Agora&#x2F;BBRTC app id expired issue</li>
-</ol>
-<ul>
-<li>Currently the app id for both rtc engine is set by Veeka mobile app, although there is api and remote config to replace these app id, none of them are used currently. The developer_options.dart should be the only source of truth when it comes to the app id configuration.</li>
-</ul>
-<h2 id="How-to-solve"><a href="#How-to-solve" class="headerlink" title="How to solve"></a>How to solve</h2><ol>
-<li>Change to different environment and check if the issue persist</li>
-<li>If it does not exist on the other environment, it is high likely that the app id is expired, find X教授 if it is related to Agora, bbrtc team if it is related to bbrtc</li>
-</ol>
 
                 
               </div>
@@ -314,15 +306,8 @@
     
       <span class="category-chain">
         
-  <a href="/tech-documentation/categories/veeka-mobile/" class="category-chain-item">veeka_mobile</a>
+  <a href="/tech-documentation/categories/documentation-implementation/" class="category-chain-item">documentation_implementation</a>
   
-  
-    <span>></span>
-    
-  <a href="/tech-documentation/categories/veeka-mobile/rtc/" class="category-chain-item">rtc</a>
-  
-  
-
   
 
       </span>
@@ -336,9 +321,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tech-documentation/tags/Agora/">#Agora</a>
-      
-        <a href="/tech-documentation/tags/BBRTC/">#BBRTC</a>
+        <a href="/tech-documentation/tags/Documentation/">#Documentation</a>
       
     </div>
   
@@ -350,8 +333,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Agora &amp; BBRTC Debug steps</div>
-      <div>https://dylansalim-ola.github.io/tech-documentation/post/veeka_mobile/rtc/rtc.html</div>
+      <div>Code Documentation</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/documentation_implementation/code_documentation.html</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +346,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 13, 2023</div>
+          <div>June 14, 2023</div>
         </div>
       
       
@@ -401,18 +384,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tech-documentation/post/veeka_mobile/login/login.html" title="Auth failed issue upon login">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Auth failed issue upon login</span>
-                        <span class="visible-mobile">Previous</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tech-documentation/post/agilekit/agilekit_intro_usage.html" title="AgileKit">
-                        <span class="hidden-mobile">AgileKit</span>
+                      <a href="/tech-documentation/post/documentation_implementation/wiki_documentation.html" title="Wiki Documentation">
+                        <span class="hidden-mobile">Wiki Documentation</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -435,7 +412,7 @@
         var options = Object.assign(
           {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
           {
-            id: 'e1eadd37a1eab66dee012bfff360c30c'
+            id: '30555f107d806e239c36256d80770a9c'
           }
         )
         var gitalk = new Gitalk(options);

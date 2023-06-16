@@ -21,6 +21,9 @@ One stop wiki for all, wiki shouldn't include tech stuff, but links to guides (i
 - easy to use
 - reduce overhead communication
 
+### Stakeholder
+- All employees (Internal tech first, then expand)
+
 ## This wiki documentation may consist of 2 parts:
 1. General Purpose Wiki - Includes links to Google drive, docs, who to contact, short guides (extensive tech documentations should not be included in this wiki)
 2. Tech Documentation - Includes tech-only extensive documentation, frontend and backend (open to discussion whether frontend and backend need to have a separate BookStack)

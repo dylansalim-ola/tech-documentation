@@ -15,6 +15,9 @@ date: 2023-06-14 18:26:00
 # Code Documentation Implementations
 ## Aim: 
 To ease the onboarding process of a new frontend developer into veeka-app, from setup to productions. This documentation should be minimal, short and concise. The complex documentation should be included in the wiki/bookstack.
+
+### Stakeholder
+- All client engineers (especially for new client engineers onboarding)
 ## Todo: 
 Rewrite the README.md to acts as an easy setup documentation for newcomers to refer
 

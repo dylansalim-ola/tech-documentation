@@ -15,6 +15,12 @@ date: 2023-06-14 18:26:00
 # Wiki Implementations
 ## Aim 
 To create a centralized, general purpose documentation for all employees in SG team (current state, may be expanded to all in the future)
+One stop wiki for all, wiki shouldn't include tech stuff, but links to guides (included with tags for easy searching)
+### Problem to solve 
+- make it searchable
+- easy to use
+- reduce overhead communication
+
 ## This wiki documentation may consist of 2 parts:
 1. General Purpose Wiki - Includes links to Google drive, docs, who to contact, short guides (extensive tech documentations should not be included in this wiki)
 2. Tech Documentation - Includes tech-only extensive documentation, frontend and backend (open to discussion whether frontend and backend need to have a separate BookStack)

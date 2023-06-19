@@ -27,6 +27,7 @@ One stop wiki for all, wiki shouldn't include tech stuff, but links to guides (i
 ## This wiki documentation may consist of 2 parts:
 1. General Purpose Wiki - Includes links to Google drive, docs, who to contact, short guides (extensive tech documentations should not be included in this wiki)
 2. Tech Documentation - Includes tech-only extensive documentation, frontend and backend (open to discussion whether frontend and backend need to have a separate BookStack)
+  
 ## Todo
 Implement a wiki page and BookStack. Define the wiki & BookStack roles and rules
 
@@ -40,9 +41,9 @@ Implement a wiki page and BookStack. Define the wiki & BookStack roles and rules
 
 ## Criteria for Wiki:
 1. Easy to edit, easy syntax recommendation
-{% asset_img "/images/pm_wiki_edit_1.png" Example 1 %}
-{% asset_img "/images/pm_wiki_edit_2.png" Example 2 %}
-2. Role Permission to edit or view only, allow login
+<img src="./../../images/pm_wiki_edit_1.png" />
+<img src="./../../images/pm_wiki_edit_2.png" />
+1. Role Permission to edit or view only, allow login
 
 ## Wiki Recommendations
 1. [MediaWiki](https://www.mediawiki.org/wiki/MediaWiki)
@@ -73,3 +74,15 @@ Example: [here](https://dylansalim-ola.github.io/tech-documentation/)
 ## Open for discussion
 Links:
 https://geekflare.com/self-hosted-wiki-software/
+
+
+## Current Documentations
+- [Bumblebee](https://github.com/olachat/bumblebee/blob/main/docs/code_review_guideline/01.General_Guides.md) 
+- [Ola Youtube](https://www.youtube.com/playlist?list=PLoPO3cY_SOHn5Y207wg-CGAhPL9457r_E)
+
+### Discussion point
+1. Wiki usage, what problems should it to solve?
+2. Do we need an extra place to store the tech documentations like BookStack? or we just use bumblebee?
+3. An architecture diagram does help to give an overall picture of a requirement/system flow. Do we need to setup a workflow where backend and frontend developers sit down and develop such diagram for future reference?
+
+<img src="./../../images/architecture_diagram.png" />

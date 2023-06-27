@@ -13,6 +13,7 @@ date: 2023-06-14 18:26:00
 
 <!-- more -->
 # Wiki & Tech Documentation
+Wiki Link: https://github.com/olachat/veeka/wiki
 ## Background
 Knowledge sharing and documentation play a crucial role in organizations, as they facilitate the transfer of information, best practices, and lessons learned. Currently, we didn't use our wiki good enough, most of the time our knowledge is scattered across various systems, files, and individuals, it becomes difficult to locate and access relevant information.    
 

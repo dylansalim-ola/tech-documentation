@@ -16,25 +16,24 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="AgileKit Docs and usage，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;agilekit">
+    <meta name="description" content="PT Flutter Web自动部署">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AgileKit">
-<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/agilekit/agilekit_intro_usage.html">
+<meta property="og:title" content="PT Flutter Web自动部署">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="AgileKit Docs and usage，Ticket: https:&#x2F;&#x2F;github.com&#x2F;olachat&#x2F;agilekit">
+<meta property="og:description" content="PT Flutter Web自动部署">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agilekit.png">
-<meta property="article:published_time" content="2023-03-09T10:26:00.000Z">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
+<meta property="article:published_time" content="2023-09-15T03:12:00.000Z">
 <meta property="article:modified_time" content="2023-09-15T08:00:03.708Z">
 <meta property="article:author" content="Dylan">
-<meta property="article:tag" content="AgileKit">
-<meta property="article:tag" content="Github Project">
+<meta property="article:tag" content="H5">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agilekit.png">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
   
   
   
-  <title>AgileKit - Dylan的文档</title>
+  <title>PT Flutter Web自动部署 - Dylan的文档</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="AgileKit"></span>
+            <span id="subtitle" data-typed-text="PT Flutter Web自动部署"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-09 18:26" pubdate>
-          March 9, 2023 pm
+        <time datetime="2023-09-15 11:12" pubdate>
+          September 15, 2023 am
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          832 words
+          1.3k words
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          7 mins
+          11 mins
         
       </span>
     
@@ -272,33 +271,49 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">AgileKit</h1>
+            <h1 style="display: none">PT Flutter Web自动部署</h1>
             
             
               <div class="markdown-body">
                 
                 <blockquote>
-<p>AgileKit Docs and usage，Ticket: <a target="_blank" rel="noopener" href="https://github.com/olachat/agilekit">https://github.com/olachat/agilekit</a></p>
+<p>PT Flutter Web自动部署</p>
 </blockquote>
 <span id="more"></span>
-<h1 id="agilekit"><a href="#agilekit" class="headerlink" title="agilekit"></a>agilekit</h1><p>Go project to organize and process github issues.</p>
-<h2 id="Prerequisite"><a href="#Prerequisite" class="headerlink" title="Prerequisite"></a>Prerequisite</h2><ul>
-<li>go version 1.19</li>
+
+<h1 id="PT-Flutter-Web自动部署"><a href="#PT-Flutter-Web自动部署" class="headerlink" title="PT Flutter Web自动部署"></a>PT Flutter Web自动部署</h1><ul>
+<li>PT Flutter web新的代码库： <a target="_blank" rel="noopener" href="https://github.com/olachat/pt-zh-flutter-web-page">https://github.com/olachat/pt-zh-flutter-web-page</a></li>
+<li>PT Flutter web 打包后的代码库（包含build文件）：<a target="_blank" rel="noopener" href="https://github.com/olachat/pt-web-page-build">https://github.com/olachat/pt-web-page-build</a></li>
+<li>Github Actions yaml: <a target="_blank" rel="noopener" href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml">https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml</a></li>
+<li>Aliyun flow: <a target="_blank" rel="noopener" href="https://flow.aliyun.com/pipelines/2493185/current">https://flow.aliyun.com/pipelines/2493185/current</a></li>
+<li>新flutter web 域名：<ul>
+<li><a target="_blank" rel="noopener" href="https://page.partying.tw/flutter/pt/">https://page.partying.tw/flutter/pt/</a> （线上）</li>
+<li><a target="_blank" rel="noopener" href="https://page.partying.chat/flutter/pt/">https://page.partying.chat/flutter/pt/</a> （线上，国内域名）</li>
+<li><a target="_blank" rel="noopener" href="https://page.partying.dev/flutter/pt/">https://page.partying.dev/flutter/pt/</a> (dev)</li>
 </ul>
-<h2 id="To-generate-CSV-file"><a href="#To-generate-CSV-file" class="headerlink" title="To generate CSV file"></a>To generate CSV file</h2><ol>
-<li>Update the conf.toml<figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><code class="hljs yaml">[<span class="hljs-string">app</span>]<br><span class="hljs-string">port=5555</span><br><span class="hljs-string">GithubToken=&quot;YOUR_GITHUB_TOKEN&quot;</span><br><span class="hljs-string">OrgName=&quot;olachat&quot;</span><br><span class="hljs-string">ProjectNumber=12380446</span><br><span class="hljs-string">TeamName=&quot;veeka&quot;</span><br><span class="hljs-string">GithubAPIUrl=&quot;https://api.github.com/&quot;</span><br></code></pre></td></tr></table></figure></li>
-<li>Generate CSV Files<br>a. Generate for all sprints<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-all <br></code></pre></td></tr></table></figure></li>
-</ol>
-<p>b. Generate for current sprint only</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit okr-current <br></code></pre></td></tr></table></figure>
-
-
-<h2 id="To-Archive-old-issues"><a href="#To-Archive-old-issues" class="headerlink" title="To Archive old issues"></a>To Archive old issues</h2><ol>
-<li><p>Dry run to view the closable issues available</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive <br></code></pre></td></tr></table></figure>
 </li>
-<li><p>Execute close command to all closable issues <br>(WARNING: Run this cmd only when you know what you are doing)</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">make Makefile -C /Users/ola_friend/Documents/REPO/agilekit archive-exec<br></code></pre></td></tr></table></figure></li>
+<li>部署事件bot: partying-web-bot (可以找 Dylan Salim 石田 要求slack channel权限)</li>
+</ul>
+<h2 id="自动部署使用指南："><a href="#自动部署使用指南：" class="headerlink" title="自动部署使用指南："></a>自动部署使用指南：</h2><p>只需要pr进master或者dev就会自动部署</p>
+<h2 id="自动部署flow："><a href="#自动部署flow：" class="headerlink" title="自动部署flow："></a>自动部署flow：</h2><ol>
+<li><p>新flutter web的github actions会聆听beta和dev分支，Master 和dev 分支都需要以pr的方式提交代码。<br>Github actions 的代码请查看 <a target="_blank" rel="noopener" href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml">action</a><br>如果有新的commit，便会通知partying-web-bot的slack群。</p>
+<img src="./../../images/h5_flutter_deploy/bot_processing.png" srcset="/tech-documentation/img/loading.gif" lazyload />
+</li>
+<li><p>Flutter web的打包动作会由github actions去触发，调用我们客户端的打包机器去打包文件。<br>打包的脚本: <a target="_blank" rel="noopener" href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/scripts/build-prod.sh">https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/scripts/build-prod.sh</a></p>
+</li>
+<li><p>打包完成后，actions会上载至另一个打包后的代码库, <a target="_blank" rel="noopener" href="https://github.com/olachat/pt-web-page-build/tree/master">pt-web-page-build</a> (用法和web-page-flutter的代码库相似)。</p>
+</li>
+<li><p>在上载build文件后， github actions 会触发一个webhook通知云效。<br>云效在收到请求后，会搬运文件去我们新的pt-h5的机器。<br>搬运的branch名是通过webhook param传的。(都在github actions里)<br>阿里云云效: <a target="_blank" rel="noopener" href="https://flow.aliyun.com/pipelines/2493185/current">https://flow.aliyun.com/pipelines/2493185/current</a><br>发送webhook后，会更新之前的slack信息</p>
+<img src="./../../images/h5_flutter_deploy/bot_copying.png" srcset="/tech-documentation/img/loading.gif" lazyload />
+</li>
+<li><p>云效搬运好后，会更新之前的slack信息</p>
+<img src="./../../images/h5_flutter_deploy/bot_done.png" srcset="/tech-documentation/img/loading.gif" lazyload /></li>
+</ol>
+<ul>
+<li>云效flow config<img src="./../../images/h5_flutter_deploy/yunxiao.png" srcset="/tech-documentation/img/loading.gif" lazyload /></li>
+</ul>
+<h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol>
+<li>云效里有什么功能？为什么使用云效而不是使用 <code>scp</code> 拷贝去部署机器？<br>A: 云效只有拷贝文件和通知slack部署已经完成的功能<br>此功能也能使用 <code>scp</code> 完成，<code>scp</code>也会比云效快<br>我们这次的自动部署功能改用云效是因为安全考量，不把机器ssh token存在github里</li>
 </ol>
 
                 
@@ -318,7 +333,7 @@
     
       <span class="category-chain">
         
-  <a href="/tech-documentation/categories/agilekit/" class="category-chain-item">agilekit</a>
+  <a href="/tech-documentation/categories/H5%E9%83%A8%E7%BD%B2/" class="category-chain-item">H5部署</a>
   
   
 
@@ -333,9 +348,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tech-documentation/tags/AgileKit/">#AgileKit</a>
-      
-        <a href="/tech-documentation/tags/Github-Project/">#Github Project</a>
+        <a href="/tech-documentation/tags/H5/">#H5</a>
       
     </div>
   
@@ -347,8 +360,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>AgileKit</div>
-      <div>https://dylansalim-ola.github.io/tech-documentation/post/agilekit/agilekit_intro_usage.html</div>
+      <div>PT Flutter Web自动部署</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/H5部署/H5_flutter_web.html</div>
     </div>
     <div class="license-meta">
       
@@ -360,7 +373,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 9, 2023</div>
+          <div>September 15, 2023</div>
         </div>
       
       
@@ -398,9 +411,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tech-documentation/post/veeka_mobile/rtc/rtc.html" title="Agora &amp; BBRTC Debug steps">
+                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/backup_love_letter.html" title="backup_love_letter">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Agora &amp; BBRTC Debug steps</span>
+                        <span class="hidden-mobile">backup_love_letter</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -408,8 +421,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/Ramadan_event.html" title="Ramadan 活动">
-                        <span class="hidden-mobile">Ramadan 活动</span>
+                      <a href="/tech-documentation/post/documentation_implementation/code_documentation.html" title="Code Documentation">
+                        <span class="hidden-mobile">Code Documentation</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -432,7 +445,7 @@
         var options = Object.assign(
           {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
           {
-            id: 'bed13be556e3fb6e9da1bb0a9ad9433e'
+            id: 'bd0a70b76406e7e762eb2a230f6ce350'
           }
         )
         var gitalk = new Gitalk(options);

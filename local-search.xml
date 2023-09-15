@@ -42,6 +42,31 @@
   
   
   <entry>
+    <title>PT Flutter Web自动部署</title>
+    <link href="/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html"/>
+    <url>/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html</url>
+    
+    <content type="html"><![CDATA[<blockquote><p>PT Flutter Web自动部署</p></blockquote><span id="more"></span><h1 id="PT-Flutter-Web自动部署"><a href="#PT-Flutter-Web自动部署" class="headerlink" title="PT Flutter Web自动部署"></a>PT Flutter Web自动部署</h1><ul><li>PT Flutter web新的代码库： <a href="https://github.com/olachat/pt-zh-flutter-web-page">https://github.com/olachat/pt-zh-flutter-web-page</a></li><li>PT Flutter web 打包后的代码库（包含build文件）：<a href="https://github.com/olachat/pt-web-page-build">https://github.com/olachat/pt-web-page-build</a></li><li>Github Actions yaml: <a href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml">https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml</a></li><li>Aliyun flow: <a href="https://flow.aliyun.com/pipelines/2493185/current">https://flow.aliyun.com/pipelines/2493185/current</a></li><li>新flutter web 域名：<ul><li><a href="https://page.partying.tw/flutter/pt/">https://page.partying.tw/flutter/pt/</a> （线上）</li><li><a href="https://page.partying.chat/flutter/pt/">https://page.partying.chat/flutter/pt/</a> （线上，国内域名）</li><li><a href="https://page.partying.dev/flutter/pt/">https://page.partying.dev/flutter/pt/</a> (dev)</li></ul></li><li>部署事件bot: partying-web-bot (可以找 Dylan Salim 石田 要求slack channel权限)</li></ul><h2 id="自动部署使用指南："><a href="#自动部署使用指南：" class="headerlink" title="自动部署使用指南："></a>自动部署使用指南：</h2><p>只需要pr进master或者dev就会自动部署</p><h2 id="自动部署flow："><a href="#自动部署flow：" class="headerlink" title="自动部署flow："></a>自动部署flow：</h2><ol><li><p>新flutter web的github actions会聆听beta和dev分支，Master 和dev 分支都需要以pr的方式提交代码。<br>Github actions 的代码请查看 <a href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/build.yaml">action</a><br>如果有新的commit，便会通知partying-web-bot的slack群。</p><img src="./../../images/h5_flutter_deploy/bot_processing.png" /></li><li><p>Flutter web的打包动作会由github actions去触发，调用我们客户端的打包机器去打包文件。<br>打包的脚本: <a href="https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/scripts/build-prod.sh">https://github.com/olachat/pt-zh-flutter-web-page/blob/master/.github/workflows/scripts/build-prod.sh</a></p></li><li><p>打包完成后，actions会上载至另一个打包后的代码库, <a href="https://github.com/olachat/pt-web-page-build/tree/master">pt-web-page-build</a> (用法和web-page-flutter的代码库相似)。</p></li><li><p>在上载build文件后， github actions 会触发一个webhook通知云效。<br>云效在收到请求后，会搬运文件去我们新的pt-h5的机器。<br>搬运的branch名是通过webhook param传的。(都在github actions里)<br>阿里云云效: <a href="https://flow.aliyun.com/pipelines/2493185/current">https://flow.aliyun.com/pipelines/2493185/current</a><br>发送webhook后，会更新之前的slack信息</p><img src="./../../images/h5_flutter_deploy/bot_copying.png" /></li><li><p>云效搬运好后，会更新之前的slack信息</p><img src="./../../images/h5_flutter_deploy/bot_done.png" /></li></ol><ul><li>云效flow config<img src="./../../images/h5_flutter_deploy/yunxiao.png" /></li></ul><h2 id="FAQ"><a href="#FAQ" class="headerlink" title="FAQ"></a>FAQ</h2><ol><li>云效里有什么功能？为什么使用云效而不是使用 <code>scp</code> 拷贝去部署机器？<br>A: 云效只有拷贝文件和通知slack部署已经完成的功能<br>此功能也能使用 <code>scp</code> 完成，<code>scp</code>也会比云效快<br>我们这次的自动部署功能改用云效是因为安全考量，不把机器ssh token存在github里</li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>H5部署</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>H5</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>Code Documentation</title>
     <link href="/tech-documentation/post/documentation_implementation/code_documentation.html"/>
     <url>/tech-documentation/post/documentation_implementation/code_documentation.html</url>
@@ -162,9 +187,9 @@
     
     <tags>
       
-      <tag>接口文档</tag>
-      
       <tag>H5</tag>
+      
+      <tag>接口文档</tag>
       
     </tags>
     
@@ -189,9 +214,9 @@
     
     <tags>
       
-      <tag>接口文档</tag>
-      
       <tag>H5</tag>
+      
+      <tag>接口文档</tag>
       
     </tags>
     
@@ -328,9 +353,9 @@
     
     <tags>
       
-      <tag>接口文档</tag>
-      
       <tag>H5</tag>
+      
+      <tag>接口文档</tag>
       
     </tags>
     

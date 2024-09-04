@@ -16,24 +16,24 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;recharge_agent.proto --ts_proto_opt&#x3D;esModuleInterop&#x3D;true --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
+    <meta name="description" content="PHP Check log Check &amp; verify supervisor config name1supervisorctl status | grep -i &quot;php_activity&quot; Cd into the conf folder1cdconf NOTE: cdconf is an alias to &#x2F;etc&#x2F;supervisor&#x2F;conf.d List o">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Technical note">
-<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/technical_note.html">
+<meta property="og:title" content="PHP Check log">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/backend_php.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="H5 Proto to Typescript1protoc --plugin&#x3D;.&#x2F;node_modules&#x2F;.bin&#x2F;protoc-gen-ts_proto --ts_proto_out&#x3D;. .&#x2F;src&#x2F;service&#x2F;recharge_agent.proto --ts_proto_opt&#x3D;esModuleInterop&#x3D;true --ts_proto_opt&#x3D;env&#x3D;browser  Mobx">
+<meta property="og:description" content="PHP Check log Check &amp; verify supervisor config name1supervisorctl status | grep -i &quot;php_activity&quot; Cd into the conf folder1cdconf NOTE: cdconf is an alias to &#x2F;etc&#x2F;supervisor&#x2F;conf.d List o">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
-<meta property="article:published_time" content="2023-03-27T03:48:00.000Z">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
+<meta property="article:published_time" content="2024-09-04T08:27:00.000Z">
 <meta property="article:modified_time" content="2024-09-04T08:32:32.491Z">
 <meta property="article:author" content="Dylan">
-<meta property="article:tag" content="Technical note">
+<meta property="article:tag" content="PHP">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/workflow.png">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
   
   
   
-  <title>Technical note - Dylan的文档</title>
+  <title>PHP Check log - Dylan的文档</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -199,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Technical note"></span>
+            <span id="subtitle" data-typed-text="PHP Check log"></span>
           
         </div>
 
@@ -210,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-27 11:48" pubdate>
-          March 27, 2023 am
+        <time datetime="2024-09-04 16:27" pubdate>
+          September 4, 2024 pm
         </time>
       </span>
     
@@ -222,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          917 words
+          1k words
         
       </span>
     
@@ -233,7 +233,7 @@
         
         
         
-          8 mins
+          9 mins
         
       </span>
     
@@ -271,16 +271,28 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Technical note</h1>
+            <h1 style="display: none">PHP Check log</h1>
             
             
               <div class="markdown-body">
                 
-                <h2 id="H5-Proto-to-Typescript"><a href="#H5-Proto-to-Typescript" class="headerlink" title="H5 Proto to Typescript"></a>H5 Proto to Typescript</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">protoc --plugin=./node_modules/.bin/protoc-gen-ts_proto --ts_proto_out=. ./src/service/recharge_agent.proto --ts_proto_opt=esModuleInterop=<span class="hljs-literal">true</span> --ts_proto_opt=<span class="hljs-built_in">env</span>=browser<br></code></pre></td></tr></table></figure>
+                <h2 id="PHP-Check-log"><a href="#PHP-Check-log" class="headerlink" title="PHP Check log"></a>PHP Check log</h2><ol>
+<li>Check &amp; verify supervisor config name<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">supervisorctl status <span class="hljs-string">| grep -i &quot;</span>php_activity<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure></li>
+<li>Cd into the conf folder<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">cdconf</span><br></code></pre></td></tr></table></figure>
+NOTE: cdconf is an alias to <code>/etc/supervisor/conf.d</code></li>
+<li>List out all the config info of the cmd task to log<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">cat</span> php_activity.cmd.pt_pay_welfare.<span class="hljs-keyword">conf</span><br></code></pre></td></tr></table></figure></li>
+</ol>
+<p>Example conf:</p>
+<figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[program:php_activity.cmd.pt_pay_welfare]</span><br><span class="hljs-attr">directory</span> = /home/webroot/olachat/pta-activity/<span class="hljs-number">12</span><br><span class="hljs-attr">command</span> = php /home/webroot/olachat/pta-activity/<span class="hljs-number">12</span>/cli.php pt_pay_welfare<br><span class="hljs-attr">autostart</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">autorestart</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">startsecs</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stdout_logfile</span> = /home/ecs-user/log/php_activity/php_activity.cmd.pt_pay_welfare.stdout.log<br><span class="hljs-attr">stdout_logfile_backups</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stdout_capture_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">stdout_logfile_maxbytes</span> = <span class="hljs-number">20</span>MB<br><span class="hljs-attr">redirect_stderr</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">stderr_logfile</span> = /home/ecs-user/log/php_activity/php_activity.cmd.pt_pay_welfare.stderr.log<br><span class="hljs-attr">stderr_logfile_backups</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stderr_capture_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">stderr_logfile_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">user</span> = ecs-user<br></code></pre></td></tr></table></figure>
+<p>Copy and directory name</p>
+<ol start="4">
+<li><p>Cd into the directory path</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/home/</span>webroot<span class="hljs-regexp">/olachat/</span>pta-activity/<span class="hljs-number">12</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Tail log from the cache folder</p>
+<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">tail -f cache/<span class="hljs-built_in">log</span>/web_debug_2024-<span class="hljs-number">09</span>-<span class="hljs-number">04</span>.<span class="hljs-built_in">log</span> <span class="hljs-string">| grep &quot;</span>kanfjdks<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure></li>
+</ol>
 
-<h2 id="Mobx-generation"><a href="#Mobx-generation" class="headerlink" title="Mobx generation"></a>Mobx generation</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">flutter pub run mobx_bin:gen -s banban_base/bbroom/lib/src/lucky_wheel/store/lucky_wheel_store.dart<br></code></pre></td></tr></table></figure>
-
-<h2 id="Reload"><a href="#Reload" class="headerlink" title="Reload"></a>Reload</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><code class="hljs bash">curl --location --request POST <span class="hljs-string">&#x27;http://vk.sgola.cc/go/Payment/InternalCreditAccount&#x27;</span> \<br>--header <span class="hljs-string">&#x27;Content-Type: application/json&#x27;</span> \<br>--data-raw <span class="hljs-string">&#x27;&#123;&quot;userID”:”112684”, type&quot;:&quot;gold_normal&quot;,&quot;operation&quot;:&quot;income&quot;,&quot;amount&quot;:&quot;99999&quot;,&quot;expiry&quot;:&quot;2023-10-01T00:00:00Z&quot;,&quot;trxType&quot;:&quot;internal_iap&quot;,&quot;trxID&quot;:&quot;1&quot;,&quot;trxUniqueKey&quot;:&quot;&quot;,&quot;subject&quot;:&quot;加钱&quot;,&quot;opDetail&quot;:&#123;&quot;scenario&quot;:&quot;test&quot;,&quot;extra&quot;:&#123;&#125;&#125;&#125;&#x27;</span><br></code></pre></td></tr></table></figure>
                 
               </div>
             
@@ -320,7 +332,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tech-documentation/tags/Technical-note/">#Technical note</a>
+        <a href="/tech-documentation/tags/PHP/">#PHP</a>
       
     </div>
   
@@ -332,8 +344,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Technical note</div>
-      <div>https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/technical_note.html</div>
+      <div>PHP Check log</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/backend_php.html</div>
     </div>
     <div class="license-meta">
       
@@ -345,7 +357,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 27, 2023</div>
+          <div>September 4, 2024</div>
         </div>
       
       
@@ -383,9 +395,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tech-documentation/post/practice/technical_note/h5_technical_note.html" title="H5 React Technical note">
+                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/backup_love_letter.html" title="backup_love_letter">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">H5 React Technical note</span>
+                        <span class="hidden-mobile">backup_love_letter</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -393,8 +405,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tech-documentation/post/h5_%E6%B4%BB%E5%8A%A8/H5_CP_PK_event.html" title="最佳情侣pk赛活动">
-                        <span class="hidden-mobile">最佳情侣pk赛活动</span>
+                      <a href="/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html" title="PT Flutter Web自动部署">
+                        <span class="hidden-mobile">PT Flutter Web自动部署</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -417,7 +429,7 @@
         var options = Object.assign(
           {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
           {
-            id: '07095beb6fe184a1051b6c3e36a4e21f'
+            id: '7587619fd653891843015ca73dcb7c0c'
           }
         )
         var gitalk = new Gitalk(options);

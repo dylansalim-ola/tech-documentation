@@ -42,6 +42,33 @@
   
   
   <entry>
+    <title>PHP Check log</title>
+    <link href="/tech-documentation/post/practice/technical_note/backend_php.html"/>
+    <url>/tech-documentation/post/practice/technical_note/backend_php.html</url>
+    
+    <content type="html"><![CDATA[<h2 id="PHP-Check-log"><a href="#PHP-Check-log" class="headerlink" title="PHP Check log"></a>PHP Check log</h2><ol><li>Check &amp; verify supervisor config name<figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">supervisorctl status <span class="hljs-string">| grep -i &quot;</span>php_activity<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure></li><li>Cd into the conf folder<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">cdconf</span><br></code></pre></td></tr></table></figure>NOTE: cdconf is an alias to <code>/etc/supervisor/conf.d</code></li><li>List out all the config info of the cmd task to log<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">cat</span> php_activity.cmd.pt_pay_welfare.<span class="hljs-keyword">conf</span><br></code></pre></td></tr></table></figure></li></ol><p>Example conf:</p><figure class="highlight ini"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><code class="hljs ini"><span class="hljs-section">[program:php_activity.cmd.pt_pay_welfare]</span><br><span class="hljs-attr">directory</span> = /home/webroot/olachat/pta-activity/<span class="hljs-number">12</span><br><span class="hljs-attr">command</span> = php /home/webroot/olachat/pta-activity/<span class="hljs-number">12</span>/cli.php pt_pay_welfare<br><span class="hljs-attr">autostart</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">autorestart</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">startsecs</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stdout_logfile</span> = /home/ecs-user/log/php_activity/php_activity.cmd.pt_pay_welfare.stdout.log<br><span class="hljs-attr">stdout_logfile_backups</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stdout_capture_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">stdout_logfile_maxbytes</span> = <span class="hljs-number">20</span>MB<br><span class="hljs-attr">redirect_stderr</span> = <span class="hljs-literal">true</span><br><span class="hljs-attr">stderr_logfile</span> = /home/ecs-user/log/php_activity/php_activity.cmd.pt_pay_welfare.stderr.log<br><span class="hljs-attr">stderr_logfile_backups</span> = <span class="hljs-number">10</span><br><span class="hljs-attr">stderr_capture_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">stderr_logfile_maxbytes</span> = <span class="hljs-number">1</span>MB<br><span class="hljs-attr">user</span> = ecs-user<br></code></pre></td></tr></table></figure><p>Copy and directory name</p><ol start="4"><li><p>Cd into the directory path</p><figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/home/</span>webroot<span class="hljs-regexp">/olachat/</span>pta-activity/<span class="hljs-number">12</span><br></code></pre></td></tr></table></figure></li><li><p>Tail log from the cache folder</p><figure class="highlight 1c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs 1c">tail -f cache/<span class="hljs-built_in">log</span>/web_debug_2024-<span class="hljs-number">09</span>-<span class="hljs-number">04</span>.<span class="hljs-built_in">log</span> <span class="hljs-string">| grep &quot;</span>kanfjdks<span class="hljs-string">&quot;</span><br></code></pre></td></tr></table></figure></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>practice</category>
+      
+      <category>technical_note</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>PHP</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>PT Flutter Web自动部署</title>
     <link href="/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html"/>
     <url>/tech-documentation/post/H5%E9%83%A8%E7%BD%B2/H5_flutter_web.html</url>

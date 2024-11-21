@@ -16,25 +16,24 @@
   <meta name="author" content="Dylan">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Steps to debug agora and bbrtc  BackgroundAgora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.Agora is used in video room whereas bbrtc is u">
+    <meta name="description" content="pt-oversea cd into supervisor conf 1cdconf OR 1cd &#x2F;etc&#x2F;supervisor&#x2F;conf.d  Print out your preferred conf 1cat go_activity.http-77.conf  Get the log location and tail the log 1less +G &#x2F;home&#x2F;webroot&#x2F;olac">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Agora &amp; BBRTC Debug steps">
-<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/veeka_mobile/rtc/rtc.html">
+<meta property="og:title" content="Go Check log">
+<meta property="og:url" content="https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/backend_go.html">
 <meta property="og:site_name" content="Dylan的文档">
-<meta property="og:description" content="Steps to debug agora and bbrtc  BackgroundAgora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.Agora is used in video room whereas bbrtc is u">
+<meta property="og:description" content="pt-oversea cd into supervisor conf 1cdconf OR 1cd &#x2F;etc&#x2F;supervisor&#x2F;conf.d  Print out your preferred conf 1cat go_activity.http-77.conf  Get the log location and tail the log 1less +G &#x2F;home&#x2F;webroot&#x2F;olac">
 <meta property="og:locale" content="en_US">
-<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agora.jpg">
-<meta property="article:published_time" content="2023-03-13T10:26:00.000Z">
+<meta property="og:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
+<meta property="article:published_time" content="2024-09-04T08:27:00.000Z">
 <meta property="article:modified_time" content="2024-11-21T04:29:48.383Z">
 <meta property="article:author" content="Dylan">
-<meta property="article:tag" content="Agora">
-<meta property="article:tag" content="BBRTC">
+<meta property="article:tag" content="Go">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/agora.jpg">
+<meta name="twitter:image" content="https://dylansalim-ola.github.io/tech-documentation/images/h5_flutter_web/thumbnail.png">
   
   
   
-  <title>Agora &amp; BBRTC Debug steps - Dylan的文档</title>
+  <title>Go Check log - Dylan的文档</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -200,7 +199,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Agora &amp; BBRTC Debug steps"></span>
+            <span id="subtitle" data-typed-text="Go Check log"></span>
           
         </div>
 
@@ -211,8 +210,8 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-03-13 18:26" pubdate>
-          March 13, 2023 pm
+        <time datetime="2024-09-04 16:27" pubdate>
+          September 4, 2024 pm
         </time>
       </span>
     
@@ -223,7 +222,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          892 words
+          210 words
         
       </span>
     
@@ -234,7 +233,7 @@
         
         
         
-          8 mins
+          2 mins
         
       </span>
     
@@ -272,29 +271,22 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Agora &amp; BBRTC Debug steps</h1>
+            <h1 style="display: none">Go Check log</h1>
             
             
               <div class="markdown-body">
                 
-                <blockquote>
-<p>Steps to debug agora and bbrtc</p>
-</blockquote>
-<h2 id="Background"><a href="#Background" class="headerlink" title="Background"></a>Background</h2><p>Agora is a paid service of video, voice and live interactive streaming, whereas bbrtc is developed by ola team.<br>Agora is used in video room whereas bbrtc is used in other room<br>However, due to the network connection issue in some region including Taiwan, Agora is still the default rtc engine to use in Veeka App.</p>
-<h2 id="How-to-determine-if-we-have-agora-x2F-bbrtc-issue"><a href="#How-to-determine-if-we-have-agora-x2F-bbrtc-issue" class="headerlink" title="How to determine if we have agora&#x2F;bbrtc issue"></a>How to determine if we have agora&#x2F;bbrtc issue</h2><p>Check if the following items are having issues:</p>
-<ul>
-<li>Listen music in room</li>
-<li>Video call and see if other can view the video</li>
-</ul>
-<h2 id="Possible-issue"><a href="#Possible-issue" class="headerlink" title="Possible issue"></a>Possible issue</h2><ol>
-<li>Agora&#x2F;BBRTC app id expired issue</li>
-</ol>
-<ul>
-<li>Currently the app id for both rtc engine is set by Veeka mobile app, although there is api and remote config to replace these app id, none of them are used currently. The developer_options.dart should be the only source of truth when it comes to the app id configuration.</li>
-</ul>
-<h2 id="How-to-solve"><a href="#How-to-solve" class="headerlink" title="How to solve"></a>How to solve</h2><ol>
-<li>Change to different environment and check if the issue persist</li>
-<li>If it does not exist on the other environment, it is high likely that the app id is expired, find X教授 if it is related to Agora, bbrtc team if it is related to bbrtc</li>
+                <h2 id="pt-oversea"><a href="#pt-oversea" class="headerlink" title="pt-oversea"></a>pt-oversea</h2><ol>
+<li><p>cd into supervisor conf</p>
+<figure class="highlight ebnf"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs ebnf"><span class="hljs-attribute">cdconf</span><br></code></pre></td></tr></table></figure>
+<p>OR</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">cd <span class="hljs-regexp">/etc/</span>supervisor/conf.d<br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Print out your preferred conf</p>
+<figure class="highlight stata"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs stata"><span class="hljs-keyword">cat</span> go_activity.http-77.<span class="hljs-keyword">conf</span><br></code></pre></td></tr></table></figure>
+</li>
+<li><p>Get the log location and tail the log</p>
+<figure class="highlight awk"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs awk">less +G <span class="hljs-regexp">/home/</span>webroot<span class="hljs-regexp">/olachat/</span>pt-activity<span class="hljs-regexp">/77/</span>log/http.stdout.log<br></code></pre></td></tr></table></figure></li>
 </ol>
 
                 
@@ -314,12 +306,12 @@
     
       <span class="category-chain">
         
-  <a href="/tech-documentation/categories/veeka-mobile/" class="category-chain-item">veeka_mobile</a>
+  <a href="/tech-documentation/categories/practice/" class="category-chain-item">practice</a>
   
   
     <span>></span>
     
-  <a href="/tech-documentation/categories/veeka-mobile/rtc/" class="category-chain-item">rtc</a>
+  <a href="/tech-documentation/categories/practice/technical-note/" class="category-chain-item">technical_note</a>
   
   
 
@@ -336,9 +328,7 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tech-documentation/tags/Agora/">#Agora</a>
-      
-        <a href="/tech-documentation/tags/BBRTC/">#BBRTC</a>
+        <a href="/tech-documentation/tags/Go/">#Go</a>
       
     </div>
   
@@ -350,8 +340,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Agora &amp; BBRTC Debug steps</div>
-      <div>https://dylansalim-ola.github.io/tech-documentation/post/veeka_mobile/rtc/rtc.html</div>
+      <div>Go Check log</div>
+      <div>https://dylansalim-ola.github.io/tech-documentation/post/practice/technical_note/backend_go.html</div>
     </div>
     <div class="license-meta">
       
@@ -363,7 +353,7 @@
       
         <div class="license-meta-item license-meta-date">
           <div>Posted on</div>
-          <div>March 13, 2023</div>
+          <div>September 4, 2024</div>
         </div>
       
       
@@ -401,9 +391,9 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/tech-documentation/post/veeka_mobile/login/login.html" title="Auth failed issue upon login">
+                      <a href="/tech-documentation/post/practice/technical_note/mount_harddisk_gracefully.html" title="Mount Harddisk gracefully">
                         <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">Auth failed issue upon login</span>
+                        <span class="hidden-mobile">Mount Harddisk gracefully</span>
                         <span class="visible-mobile">Previous</span>
                       </a>
                     
@@ -411,8 +401,8 @@
                   <article class="post-next col-6">
                     
                     
-                      <a href="/tech-documentation/post/agilekit/agilekit_intro_usage.html" title="AgileKit">
-                        <span class="hidden-mobile">AgileKit</span>
+                      <a href="/tech-documentation/post/practice/technical_note/backend_php.html" title="PHP Check log">
+                        <span class="hidden-mobile">PHP Check log</span>
                         <span class="visible-mobile">Next</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
@@ -435,7 +425,7 @@
         var options = Object.assign(
           {"clientID":"54d30ebf60c4788570f8","clientSecret":"466b597df1bf9924f643995cd1e60792a3b712e0","repo":"tech-documentation","owner":"dylansalim-ola","admin":["dylansalim-ola"],"language":"en","labels":["Gitalk"],"perPage":10,"pagerDirection":"last","distractionFreeMode":true,"createIssueManually":true,"proxy":"https://cors-anywhere.azm.workers.dev/https://github.com/login/oauth/access_token","autoExpand":true,"recentComment":true},
           {
-            id: 'e1eadd37a1eab66dee012bfff360c30c'
+            id: '704eff42aa6b2111b559da578aec78b3'
           }
         )
         var gitalk = new Gitalk(options);

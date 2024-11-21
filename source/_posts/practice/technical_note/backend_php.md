@@ -9,6 +9,12 @@ math: true
 mermaid: true
 date: 2024-09-04 16:27:00
 ---
+## pt-oversea
+1. cd into webroot
+```
+cd /home/webroot/pt-oversea/<branch>/cache/log/
+```
+
 ## PHP Check log
 1. Check & verify supervisor config name
 ```
